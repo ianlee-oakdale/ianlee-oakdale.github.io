@@ -46,7 +46,13 @@
 
 					h = (h < 10) ? "0" + h : h;
 					m = (m < 10) ? "0" + m : m;
-					document.body.innerHTML="<h1 style='position: absolute; font-size: 50px; font-family: Arsenal; font-weight: 700; right: 300px; top: 0px;''>"+h+":"+m+" "+session+"</h1>"
+
+					const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+					const d = new Date();
+					let day = weekday[d.getDay()];
+
+					document.body.innerHTML="<h1 style='position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; leftt: 600px; top: 0px;''>"+day+"&emsp; &emsp;"+"<span font-size='50px'>"+h+":"+m+" "+session"</span/></h1>"
 				</script>
 			</div>
 
@@ -63,10 +69,6 @@
 					<tr><td height="8" width="1800px" style="background-color:#00705B;"></td></tr>
 				</table>
 			</center>
-
-		<div style=" font-family: Arsenal; font-size: 35px; font-weight: 700; position: absolute; top 0px; left: 600px;">
-    		<p>Wednesday February 01</p>
-		</div>
 
 		<div>
 			   <table style="width: 900px; height: 20px; text-align:left; position: absolute; top: 250px; left: 180px; font-size: 18px;">
