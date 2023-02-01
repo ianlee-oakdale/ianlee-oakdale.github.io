@@ -1,7 +1,7 @@
 
 <html>
 	<head>
-		
+
 		<meta http-equiv="refresh" content="600">
 
 		<style>
@@ -10,40 +10,42 @@
 
 		<script>
 		function digi() {
-  var date = new Date(),
-      hour = date.getHours(),
-      minute = checkTime(date.getMinutes());
+var date = new Date(),
+		hour = date.getHours(),
+		minute = checkTime(date.getMinutes()),
+		ss = checkTime(date.getSeconds());
 
-  function checkTime(i) {
-    if( i < 10 ) {
-      i = "0" + i;
-    }
-    return i;
-  }
+function checkTime(i) {
+	if( i < 10 ) {
+		i = "0" + i;
+	}
+	return i;
+}
 
 if ( hour > 12 ) {
-  hour = hour - 12;
-  if ( hour == 12 ) {
-    hour = checkTime(hour);
-  document.getElementById("tt").innerHTML = hour+":"+minute+" AM";
-  }
-  else {
-    hour = checkTime(hour);
-    document.getElementById("tt").innerHTML = hour+":"+minute+" PM";
-  }
+hour = hour - 12;
+if ( hour == 12 ) {
+	hour = checkTime(hour);
+document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" AM";
 }
 else {
-  document.getElementById("tt").innerHTML = hour+":"+minute+" AM";;
+	hour = checkTime(hour);
+	document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" PM";
+}
+}
+else {
+document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" AM";;
 }
 var time = setTimeout(digi,1000);
 }
+
 		</script>
 
 		<style>
       }
       td, th {
-        border: 1px solid black;
-        padding: 8px;
+        border: 0x solid black;
+        padding: 0px;
       }
     </style>
 
@@ -63,16 +65,16 @@ var time = setTimeout(digi,1000);
 			</center>
 
 			<div style="position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; top: 150px; left: 80px;">
-				<div onload="digi()"></div>
+				<div onload="digi()"><p></p></div>
 			</div>
 
-		<div style=" font-family: Arsenal; font-size: 40px; position: absolute; top 100px; left: 80px;">
-    		<p><strong>Wednesday February 01, 2023</strong></p>
+		<div style=" font-family: Arsenal; font-size: 35px; position: absolute; top 100px; left: 80px;">
+    		<p><strong>Wednesday February 01</strong></p>
 		</div>
 
 		<div>
-			   <table style="width: 900px; height: 600px; text-align:left; position: absolute; top: 225px; left: 180px; font-size: 20px;">
-      				<tr style="font-family: Arsenal; font-size: 25px">
+			   <table style="width: 900px; height: 20px; text-align:left; position: absolute; top: 225px; left: 180px; font-size: 18px;">
+      				<tr style="font-family: Arsenal; font-size: 23px">
 						<th>Time</th>
         				<th>Course</th>
 	        			<th>Player1</th>
@@ -80,14 +82,15 @@ var time = setTimeout(digi,1000);
 	        			<th>Player3</th>
 	        			<th>Player4</th>
       				</tr>
-					<tr>
-						<td style="background-color: #00705B; height: 1px; width: 150px;"></td>
-						<td style="background-color: #00705B; height: 1px; width: 150px;"></td>
-						<td style="background-color: #00705B; height: 1px; width: 150px;"></td>
-						<td style="background-color: #00705B; height: 1px; width: 150px;"></td>
-						<td style="background-color: #00705B; height: 1px; width: 150px;"></td>
-						<td style="background-color: #00705B; height: 1px; width: 150px;"></td>
-					</tr>
+				</table>
+
+				<table style="width: 900px; height: 1px; text-align:left; position: absolute; top: 258px; left: 180px;">
+       				<tr>
+						<td style="background-color:#00705B; height: 1px; width: 100%;"></td>
+       				</tr>
+ 				</table>
+
+				<table style="width: 900px; height: 500px; text-align:left; position: absolute; top: 262px; left: 180px; font-size: 18px;">
       				<tr>
         				<td>Time</td>
 				        <td>Course</td>
