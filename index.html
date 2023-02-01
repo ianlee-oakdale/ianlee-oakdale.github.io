@@ -10,39 +10,39 @@
 
 		<script>
 		function digi() {
-		  var date = new Date(),
-		      hour = date.getHours(),
-		      minute = checkTime(date.getMinutes()),
-		      ss = checkTime(date.getSeconds());
+var date = new Date(),
+		hour = date.getHours(),
+		minute = checkTime(date.getMinutes()),
+		ss = checkTime(date.getSeconds());
 
-		  function checkTime(i) {
-		    if( i < 10 ) {
-		      i = "0" + i;
-		    }
-		    return i;
-		  }
+function checkTime(i) {
+	if( i < 10 ) {
+		i = "0" + i;
+	}
+	return i;
+}
 
-		if ( hour > 12 ) {
-		  hour = hour - 12;
-		  if ( hour == 12 ) {
-		    hour = checkTime(hour);
-		  document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" AM";
-		  }
-		  else {
-		    hour = checkTime(hour);
-		    document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" PM";
-		  }
-		}
-		else {
-		  document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" AM";;
-		}
-		var time = setTimeout(digi,1000);
-		}
+if ( hour > 12 ) {
+hour = hour - 12;
+if ( hour == 12 ) {
+	hour = checkTime(hour);
+document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" AM";
+}
+else {
+	hour = checkTime(hour);
+	document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" PM";
+}
+}
+else {
+document.getElementById("tt").innerHTML = hour+":"+minute+":"+ss+" AM";;
+}
+var time = setTimeout(digi,1000);
+}
 
 		</script>
 
 		<style>
-			#tt{
+			tt{
 				font-size: 40px;
 				font-family: Arsenal;
 			}
@@ -72,10 +72,24 @@
 			</center>
 
 			<div style="position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; top: 150px; left: 80px;">
-				<div><p id="tt"></p></div>
+				<script>
+					function startTime() {
+  					const today = new Date();
+  					let h = today.getHours();
+  					let m = today.getMinutes();
+  					m = checkTime(m);
+  					document.getElementById('txt').innerHTML =  h + ":" + m;
+  					setTimeout(startTime, 1000);
+					}
+
+					function checkTime(i) {
+  					if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  					return i;
+					}
+				</script>
 			</div>
 
-		<div style=" font-family: Arsenal; font-size: 35px; position: absolute; top 100px; left: 80px;">
+		<div style=" font-family: Arsenal; font-size: 35px; position: absolute; top 110px; left: 80px;">
     		<p><strong>Wednesday February 01</strong></p>
 		</div>
 
@@ -91,7 +105,7 @@
       				</tr>
 				</table>
 
-				<table style="width: 900px; height: 1px; text-align:left; position: absolute; top: 258px; left: 180px;">
+				<table style="width: 900px; height: 1px; text-align:left; position: absolute; top: 260px; left: 180px;">
        				<tr>
 						<td style="background-color:#00705B; height: 1px; width: 100%;"></td>
        				</tr>
