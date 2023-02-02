@@ -2,7 +2,7 @@
 <html>
 	<head>
 
-		<meta http-equiv="refresh" content="3000">
+		<meta http-equiv="refresh" content="30">
 
 		<style>
 		@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -30,10 +30,15 @@
 
 			<div style="position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; top: 150px; left: 80px;">
 				<script>
-					var date = new Date();
-					var h = date.getHours(); // 0 - 23
-					var m = date.getMinutes(); // 0 - 59
-					var session = "AM";
+					const d = new Date();
+					let h = d.getHours(); // 0 - 23
+					let m = d.getMinutes(); // 0 - 59
+					let session = " AM";
+					const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+					let day = weekday[d.getDay()];
+					const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+					let name = month[d.getMonth()];
+					let daynum =d.getDate();
 
 					if(h == 0){
 						h = 12;
@@ -41,18 +46,14 @@
 
 					if(h > 12){
 						h = h - 12;
-						session = "PM";
+						session = " PM";
 					}
 
 					h = (h < 10) ? "0" + h : h;
 					m = (m < 10) ? "0" + m : m;
 
-					const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-					const d = new Date();
-					let day = weekday[d.getDay()];
-
-					document.body.innerHTML="<h1 style='position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; leftt: 600px; top: 0px;'>"+day+"&emsp; &emsp;"+"<span font-size='50px'>"+h+":"+m+" "+session"</span/></h1>";
+				 document.body.innerHTML='<h1 style="position: absolute; font-size: 38px; font-family: Arsenal; font-weight: 700; right :85px; top: 10px;">'+day+', '+name+' '+daynum+'  &emsp;  &emsp; &emsp; &emsp; &emsp; &emsp;  &emsp;  &emsp; &emsp; &emsp; &emsp;<span style="font-size: 45px;">'+h+':'+m+session+'</span></div>';
 				</script>
 			</div>
 
@@ -71,8 +72,8 @@
 			</center>
 
 		<div>
-			   <table style="width: 900px; height: 20px; text-align:left; position: absolute; top: 250px; left: 180px; font-size: 18px;">
-      				<tr style="font-family: Arsenal; font-size: 23px">
+			   <table style="width: 900px; height: 20px; text-align:left; position: absolute; top: 200px; left: 150px; font-size: 18px;">
+      				<tr style="font-family: Arsenal; font-size: 23px; color: #00705B;">
 						<th>Time</th>
         				<th>Course</th>
 	        			<th>Player1</th>
@@ -82,76 +83,101 @@
       				</tr>
 				</table>
 
-				<table style="width: 900px; height: 1px; text-align:left; position: absolute; top: 285px; left: 180px;">
+				<table style="width: 900px; height: 1px; text-align:left; position: absolute; top: 235px; left: 150px;">
        				<tr>
 						<td style="background-color:#00705B; height: 1px; width: 100%;"></td>
        				</tr>
  				</table>
 
-				<table style="width: 900px; height: 500px; text-align:left; position: absolute; top: 287px; left: 180px; font-size: 18px;">
+				<table style="width: 900px; height: 600px; text-align:left; position: absolute; top: 240px; left: 150px; font-size: 18px;">
       				<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>11:00 am</strong></td>
+				        <td><strong>Card Room Sim</strong></td>
+				        <td>Teperman, Stuart</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>11:00 am</strong></td>
+				        <td><strong>Main Sim</strong></td>
+				        <td>Griff, Adam</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>12:00 pm</strong></td>
+				        <td><strong>Card Room Sim</strong></td>
+				        <td>Alter, Howard J</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>12:00 pm</strong></td>
+				        <td><strong>Main Sim</strong></td>
+				        <td>Feldman, Logan 2</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>1:00 pm</strong></td>
+				        <td><strong>Card Room Sim</strong></td>
+				        <td> Altbaum, Robert</td>
+				        <td>Steven, Kraft</td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>1:00 pm</strong></td>
+				        <td><strong>Main Sim</strong></td>
+				        <td> Feldman, Zachary</td>
+				        <td>Bannerman, Zak</td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>2:00 pm</strong></td>
+				        <td><strong>Card Room Sim</strong></td>
+				        <td> Garbe, Lewis</td>
+				        <td>Garbe, Ruth</td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
+
 					<tr>
-        				<td>Time</td>
-				        <td>Course</td>
-				        <td>Player1</td>
-				        <td>Player2</td>
-				        <td>Player3</td>
-						<td>Player4</td>
+        				<td><strong>2:00 pm</strong></td>
+				        <td><strong>Main Sim</strong></td>
+				        <td>Brown, Morton L</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
+				    </tr>
+
+					<tr>
+        				<td><strong>3:00 pm</strong></td>
+				        <td><strong>Card Room Sim</strong></td>
+				        <td>Goldman, Joshua</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
+				    </tr>
+
+					<tr>
+        				<td><strong>3:00 pm</strong></td>
+				        <td><strong>Main Sim</strong></td>
+				        <td>Albert, David</td>
+				        <td> </td>
+				        <td> </td>
+						<td> </td>
 				    </tr>
 
 
