@@ -100,6 +100,27 @@
 				color: #454545"
 			}
 
+			div.timer{
+				position: absolute;
+				color: #ffffff;
+				font-size: 40px;
+				font-family: Arsenal;
+				font-weight: 700;
+				left: 95px;
+				top: 28px;
+			}
+
+			div.showdate{
+				position: absolute;
+				color: #00705b;
+				font-size:40px;
+				left: 510px;
+				top: 57px;
+				font-family: Arsenal;
+				font-weight: 700;
+			}
+
+
 		</style>
 
 		<style media="all and (max-width:1500px)">
@@ -109,7 +130,7 @@
 				background-image: url('https://github.com/ianlee-oakdale/ianlee-oakdale.github.io/blob/main/updated_website_background.png?raw=true');
 				background-repeat: no-repeat;
 				background-position: left top;
-				background-size: 1050px;
+				background-size: 1100px;
 				margin: 0;
 			}
 
@@ -199,6 +220,26 @@
 							font-family: Arsenal;
 							font-weight: 700;
 							color: #454545"
+						}
+
+						div.timer{
+							position: absolute;
+							color: #ffffff;
+							font-size: 25px;
+							font-family: Arsenal;
+							font-weight: 700;
+							left: 95px;
+							top: 10px;
+						}
+
+						div.showdate{
+							position: absolute;
+							color: #00705b;
+							font-size:25px;
+							left: 510px;
+							top: 15px;
+							font-family: Arsenal;
+							font-weight: 700;
 						}
 
 
@@ -310,12 +351,12 @@
 		<body>
 
 
-				<div id="clock"  style="position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; top: 5px; left: 65px;">
-  				<nobr><h2 id="date-time" style="position: absolute; color: #ffffff; font-size: 55px; font-family: Arsenal; font-weight: 700; left: 30px; top: 23px;"></h2>
-				</nobr></div>
+				<div id="clock"  class="timer">
+  				<nobr><h2 id="date-time"></h2></nobr>
+				</div>
 
-				<div id="daydate" style="position: absolute; font-size: 40px; font-family: Arsenal; font-weight: 700; top: 7px; left: 120px;">
-					<nobr><h1 id="calendar" style="position: absolute; color: #00705b; font-size:45px; left: 390px; top: 50px;"></h1></nobr>
+				<div id="daydate" class="showdate">
+					<nobr><h1 id="calendar"></h1></nobr>
 				</div>
 
 		<div>
@@ -433,12 +474,12 @@
  				</table>
 				<table class="weather2">
        				<tr>
-						<td>Overcast Clouds</td>
+						<td>Snow</td>
        				</tr>
  				</table>
 				<table class="weather3">
        				<tr>
-						<td><img style="height: 60%; width: 60%;" src="http://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon"></img></td>
+						<td><img style="height: 60%; width: 60%;" src="http://openweathermap.org/img/wn/13d@2x.png" alt="Weather Icon"></img></td>
        				</tr>
  				</table>
 				<table class="weather4">
