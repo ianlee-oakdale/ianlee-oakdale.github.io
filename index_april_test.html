@@ -6,7 +6,7 @@
 		</script>
 
 		<script type="text/javascript">
-			var text_displays= ["#343434","#00705b","#1474b3","#cccccc","#343434","#0060aa","#2596be","#343434","#00705b","#d4d2d0","#808080","#343434","#9d8656"];
+			var text_displays= ["#343434","#00705b","#147","#cccccc","#343434","#0060aa","#2596be","#343434","#00705b","#d4d2d0","#808080","#343434","#9d8656"];
 			$(function () {
 				var i = 0;
 					setInterval(function () {
@@ -15,6 +15,20 @@
 								i = 0;
 						}
 							$("#body").css("background",text_displays[i]);
+					}, 120000);
+				});
+		</script>
+
+		<script type="text/javascript">
+			var clock_displays= ["#ffffff","#ffffff","#ffffff","#343434","#ffffff","#ffffff","#ffffff","#ffffff","#ffffff","#343434","#ffffff","#ffffff","#ffffff"];
+			$(function () {
+				var i = 0;
+					setInterval(function () {
+						i++;
+						if (i == clock_displays.length) {
+								i = 0;
+						}
+							$("#clock-color").css("color",clock_displays[i]);
 					}, 120000);
 				});
 		</script>
@@ -51,7 +65,7 @@
 				top: 0px;
 				left: 4%;
 				width: 26%;
-				height: 18.1%;
+				height: 11.5%;
 				background: #ffffff;
 				border-bottom-right-radius: 4px;
 				box-shadow: rgba(255, 255, 255, 0.5) 2px 2px 0px 3px;
@@ -59,9 +73,9 @@
 
 			.logo_holder{
 				position: absolute;
-				width: 75%;
-				left: 12.5%;
-				top: 20%;
+				width: 70%;
+				left: 15%;
+				top: -5%;
 			}
 
 			.title_holder2{
@@ -340,6 +354,23 @@
 				transition: all ease-in-out 2s;
 			}
 
+			div.clock_holder{
+				position: fixed;
+				top: 9%;
+				left: 4.5%;
+				height: 80px;
+				color: #ffffff;
+				z-index: 1000;
+				padding: 0px;
+				transition: all ease-in-out 2s;
+			}
+
+			div.clock_holder h2{
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				font-size: 45px;
+				font-weight: 700;
+			}
+
     	</style>
 
 		<style media="all and (max-width:1500px)">
@@ -552,6 +583,12 @@
 
 		<body id="body">
 
+			<nobr>
+			<div class="clock_holder" id="clock-color">
+				<nobr><h2 id="date-time"></h2></nobr>
+			</div>
+			</nobr>
+
 			<div class="title_holder">
 				<div class="title_relative_holder">
 
@@ -565,10 +602,6 @@
 			<div class="title_holder2">
 				<div class="title_relative_holder">
 					
-					<div id="clock"  class="timer">
-						<nobr><h2 id="date-time"></h2></nobr>
-					</div>
-
 					<div id="daydate" class="showdate">
 					<nobr><h1 id="calendar"></h1></nobr>
 					</div>
@@ -597,42 +630,6 @@
 				        <td class="p" style="background: #f3f2f1;"> </td>
 						<td class="p4" style="background: #f3f2f1;"></td>
 				    </tr>
-
-					<tr>
-        				<td class="sheet1">3:00 pm</td>
-				        <td class="sheet2"><span style='color: #3f88fc; background: #3f88fc30; padding: 3px;'>&nbsp &nbsp Card Room Sim &emsp; </span></td>
-				        <td class="p"> Kramer, Justin</td>
-				        <td class="p">Kramer, Cole</td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:00 pm</td>
-				        <td class="sheet2"><span style='color: #ff5542; background: #ff554230; padding: 3px;'>&emsp; &emsp; Main Sim &emsp; &emsp; </span></td>
-				        <td class="p">Sigel, Derek Matthew</td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
 
 					<tr>
         				<td class="sheet1">4:00 pm</td>
@@ -708,7 +705,7 @@
 
 					<tr>
         				<td class="sheet1">6:00 pm</td>
-				        <td class="sheet2"><span style='color: #3f88fc; background: #3f88fc30; padding: 3px;'>&emsp; &emsp; Main Sim &emsp; &emsp; </span></td>
+				        <td class="sheet2"><span style='color: #3f88fc; background: #3f88fc30; padding: 3px;'>&nbsp &nbsp Card Room Sim &emsp; </span></td>
 				        <td class="p"> </td>
 				        <td class="p"> </td>
 				        <td class="p"> </td>
@@ -729,6 +726,42 @@
 				        <td class="sheet2"><span style='color: #ff5542; background: #ff554230; padding: 3px;'>&emsp; &emsp; Main Sim &emsp; &emsp; </span></td>
 				        <td class="p"> Roher, Ben</td>
 				        <td class="p">Casey, Spencer</td>
+				        <td class="p"> </td>
+						<td class="p4"> </td>
+				    </tr>
+
+					<tr class="spacer">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+        				<td class="sheet1"> </td>
+				        <td class="sheet2"><span style='color: #ffffff00; background: #ffffff0030; padding: 3px;'>&emsp; &emsp; Main Sim &emsp; &emsp; </span></td>
+				        <td class="p"> </td>
+				        <td class="p"> </td>
+				        <td class="p"> </td>
+						<td class="p4"> </td>
+				    </tr>
+
+					<tr class="spacer">
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+        				<td class="sheet1"> </td>
+				        <td class="sheet2"><span style='color: #ffffff00; background: #ffffff0030; padding: 3px;'> no tee time </span></td>
+				        <td class="p"> </td>
+				        <td class="p"> </td>
 				        <td class="p"> </td>
 						<td class="p4"> </td>
 				    </tr>
@@ -838,7 +871,7 @@
 					</table>
 					<table class="weather2">
 						<tr>
-							<td>Overcast Clouds</td>
+							<td>Broken Clouds</td>
 						</tr>
 					</table>
 					<table class="weather3">
