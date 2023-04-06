@@ -328,6 +328,7 @@
 
             body{
                 margin: 0;
+                background: #f5f4f0;
             }
 
             .banner{
@@ -491,8 +492,8 @@
             .dropdown-content {
                 display: none;
                 position: absolute;
-                background-color: #ffffff;
-                width: 150%;
+                background-color: #f5f4f0;
+                width: 180%;
                 height: 100%;
                 top: -2%;
                 left: 120%;
@@ -528,9 +529,9 @@
 				font-weight: 500;
 				color: #454545;
                 border-collapse: collapse;
-                background: #ffffff;
+                background: #f5f4f0;
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-                border: 10px solid #ffffff;
+                border: 10px solid #f5f4f0;
             }
 
             table.dropdown_table tr {
@@ -543,12 +544,241 @@
 
             div.extend_page{
                 width: 100%;
-                height: 1800px;
+                height: 1200px;
             }
 
 
  
         </style>
+
+<style media="all and (max-width:600px)">
+
+            
+    body{
+        margin: 0;
+        background-color: #f5f4f0;
+    }
+
+    .banner{
+        width: 100%;
+        height: 250px;
+        background: #f5f4f0;
+        position: fixed;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+        z-index: 100;
+    }
+
+    .banner_holder{
+        width: 100%;
+        height: 150px;
+        position: relative;
+    }
+
+    .title{
+        width: 80%;
+        font-family: Arsenal;
+        color: #00705B;
+        font-size: 35;
+        position: absolute;
+        left: 10%;
+        top: 19%;
+        text-align: center;
+    }
+
+    .logo1{
+        width: 8%;
+        position: absolute;
+        left: 2%;
+        top: 10%;
+    }
+
+    .logo2{
+        width: 8%;
+        position: absolute;
+        right: 2%;
+        top: 10%;
+    }
+
+    .rules_button{
+        width: 30%;
+        position: absolute;
+        bottom: -50%;
+        left: 5%;
+        text-align: center;
+        border-right-style: solid;
+        border-right-color: #00705B;
+        color: #ffffff;
+        background-color: #00705b;
+    }
+
+    .viewtimes_button{
+        width: 30%;
+        position: absolute;
+        bottom: -50%;
+        left: 35%;
+        text-align: center;
+        border-right-style: solid;
+        border-right-color: #00705B;
+        color: #00705B;
+    }
+
+    .requests_button{
+        width: 30%;
+        position: absolute;
+        bottom: -50%;
+        left: 65%;
+        text-align: center;
+        color: #00705B;
+    }
+
+    .rules_button a{
+        color: inherit;
+        font-family: Mukta;
+        font-size: 30;
+        text-decoration: none;
+    }
+
+    .viewtimes_button a{
+        color: inherit;
+        font-family: Mukta;
+        font-size: 30;
+        text-decoration: none;
+    }
+
+    .requests_button a{
+        color: inherit;
+        font-family: Mukta;
+        font-size: 30;
+        text-decoration: none;
+    }
+
+
+    .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+    .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+    .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+    .dates_holder{
+                width: 35%;
+                left: 2%;
+                position: absolute;
+                height: 78%;
+                top: 20%;
+                box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+                z-index: 5;
+            }
+
+            .date_relative_holder{
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+
+            .date_text{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                top: 2%;
+                font-family: Mukta; 
+                font-size: 20;
+            }
+
+            .vert_spacer2{
+                width: 100%;
+                height: 10%;
+
+            }
+
+            .dropdown{
+                position: relative;
+                width: 100%;
+            }
+
+            .dropbtn{
+                background-color: #00705b;
+                color: white;
+                padding: 2px;
+                font-size: 20px;
+                font-family: Mukta;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                width: 50%;
+                position: relative;
+                left: 25%;
+                top: 0px; 
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .vert_spacer{
+                width: 100%;
+                height: 5px;
+            }
+
+            .dropbtn:hover {background-color: #f1f1f1; color: #00705B;}
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f5f4f0;
+                width: 180%;
+                height: 100%;
+                top: -2%;
+                left: 120%;
+                z-index: 5;
+            }
+
+            .show {display:block; z-index: 10;}
+            
+            .dropbtn:active {background-color: #DCBB00;}
+            
+            .dropdown_title{
+                width: 100%;
+                text-align: center; 
+                font-size: 25;
+                font-family: Mukta;
+                padding: 5px;
+                font-weight: 700;
+                padding-top: 25px;
+            }
+
+            .dropdown_table_holder{
+                width: 100%;
+            }
+
+            table.dropdown_table{
+                width: 95%;
+				text-align: left;
+				position: absolute;
+				top: 10%;
+				left: 2%;
+				font-size: 16px;
+				font-family: Mukta;
+				font-weight: 500;
+				color: #454545;
+                border-collapse: collapse;
+                background: #f5f4f0;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                border: 10px solid #f5f4f0;
+            }
+
+            table.dropdown_table tr {
+                border-bottom: 1px solid #cccccc80;
+            }
+
+            .p{font-weight: 700; color: black;}
+
+            .a{font-weight: 700; font-size: 18px;}
+
+            div.extend_page{
+                width: 100%;
+                height: 1200px;
+            }
+
+
+
+    </style>
 
 
     </head>
@@ -594,12 +824,62 @@
 <!--- Insert Code from HTML input text file here --->
 
 
+
 <div class="dropdown">
     <button onclick="myFunction1()" class="dropbtn"> Monday May 29</button>
     </div><div id="myDropdown1" class="dropdown-content">
     <div class="dropdown_title">Monday May 29 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">10:00 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">11:00 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:45 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n"><p></p></n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:10 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
@@ -610,16 +890,59 @@
     <div class="dropdown_title">Tuesday May 30 - Tee Times</div>
     <div class="dropdown_table_holder">
     <table class="dropdown_table"><tr>
+    <td><div class="a">09:00 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">LADIES ONLY - Mandatory Cart fee of $25 per player.
+    </n></td>
+    </tr>
+    
+    
+    <tr>
     <td><div class="a">11:06 AM</a></td>
     <td><div class="p">Galt Country Club</p></td>
-    <td><div class="n">$23.00 + HST cart fee per person</n></td>
+    <td><div class="n">$23 /player (mandatory cart fee)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">12:00 PM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
     </tr>
     
     
     <tr>
     <td><div class="a">01:00 PM</a></td>
     <td><div class="p">Brantford Golf Club</p></td>
-    <td><div class="n">None </n></td>
+    <td><div class="n"><p></p></n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:15 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n"><p></p></n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
     </tr>
     
     
@@ -633,7 +956,28 @@
     </div><div id="myDropdown3" class="dropdown-content">
     <div class="dropdown_title">Wednesday May 31 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">09:30 AM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">10:00 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">10:10 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
@@ -644,17 +988,44 @@
     <div class="dropdown_title">Thursday June 1 - Tee Times</div>
     <div class="dropdown_table_holder">
     <table class="dropdown_table"><tr>
+    <td><div class="a">03:10 AM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    <tr>
     <td><div class="a">10:30 AM</a></td>
     <td><div class="p">Galt Country Club</p></td>
-    <td><div class="n">$23.00 + HST cart fee per person</n></td>
+    <td><div class="n">$23 /player (mandatory cart fee)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">11:42 AM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n"><p></p></n></td>
     </tr>
     
     
     <tr>
     <td><div class="a">12:00 PM</a></td>
     <td><div class="p">Whitevale Golf Club</p></td>
-    <td><div class="n">- $26/rider (mandatory cart fee)
-    -</n></td>
+    <td><div class="n">$26 /player  (mandatory cart fee)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:30 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
     </tr>
     
     
@@ -668,7 +1039,21 @@
     </div><div id="myDropdown5" class="dropdown-content">
     <div class="dropdown_title">Friday June 2 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">12:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
@@ -736,14 +1121,14 @@
     
     <tr>
     <td><div class="a">09:20 AM</a></td>
-    <td><div class="p">St Andrews Valley</p></td>
+    <td><div class="p">Eagles Nest Golf</p></td>
     <td><div class="n">Carts Included</n></td>
     </tr>
     
     
     <tr>
     <td><div class="a">09:20 AM</a></td>
-    <td><div class="p">Eagles Nest Golf</p></td>
+    <td><div class="p">St Andrews Valley</p></td>
     <td><div class="n">Carts Included</n></td>
     </tr>
     
@@ -757,7 +1142,7 @@
     
     <tr>
     <td><div class="a">09:30 AM</a></td>
-    <td><div class="p">Eagles Nest Golf</p></td>
+    <td><div class="p">St Andrews Valley</p></td>
     <td><div class="n">Carts Included</n></td>
     </tr>
     
@@ -771,7 +1156,7 @@
     
     <tr>
     <td><div class="a">09:30 AM</a></td>
-    <td><div class="p">St Andrews Valley</p></td>
+    <td><div class="p">Eagles Nest Golf</p></td>
     <td><div class="n">Carts Included</n></td>
     </tr>
     
@@ -812,9 +1197,30 @@
     
     
     <tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
     <td><div class="a">02:00 PM</a></td>
     <td><div class="p">Brantford Golf Club</p></td>
-    <td><div class="n">None </n></td>
+    <td><div class="n"><p></p></n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:39 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n">Lottery Times - confirmed Thursday prior</n></td>
     </tr>
     
     
@@ -858,14 +1264,14 @@
     
     <tr>
     <td><div class="a">09:10 AM</a></td>
-    <td><div class="p">St Andrews Valley</p></td>
+    <td><div class="p">Angus Glen Golf Club - North Course</p></td>
     <td><div class="n">Carts Included</n></td>
     </tr>
     
     
     <tr>
     <td><div class="a">09:10 AM</a></td>
-    <td><div class="p">Angus Glen Golf Club - North Course</p></td>
+    <td><div class="p">St Andrews Valley</p></td>
     <td><div class="n">Carts Included</n></td>
     </tr>
     
@@ -962,9 +1368,16 @@
     
     
     <tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
     <td><div class="a">02:00 PM</a></td>
     <td><div class="p">Brantford Golf Club</p></td>
-    <td><div class="n">None </n></td>
+    <td><div class="n"><p></p></n></td>
     </tr>
     
     
@@ -978,7 +1391,21 @@
     </div><div id="myDropdown8" class="dropdown-content">
     <div class="dropdown_title">Monday June 5 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">01:30 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
@@ -989,16 +1416,31 @@
     <div class="dropdown_title">Tuesday June 6 - Tee Times</div>
     <div class="dropdown_table_holder">
     <table class="dropdown_table"><tr>
+    <td><div class="a">09:00 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">LADIES ONLY - Mandatory Cart fee of $25 per player.
+    </n></td>
+    </tr>
+    
+    
+    <tr>
     <td><div class="a">11:06 AM</a></td>
     <td><div class="p">Galt Country Club</p></td>
-    <td><div class="n">$23.00 + HST cart fee per person</n></td>
+    <td><div class="n">$23 /player (mandatory cart fee)</n></td>
     </tr>
     
     
     <tr>
     <td><div class="a">01:00 PM</a></td>
     <td><div class="p">Brantford Golf Club</p></td>
-    <td><div class="n">None </n></td>
+    <td><div class="n"><p></p></n></td>
     </tr>
     
     
@@ -1006,6 +1448,20 @@
     <td><div class="a">01:36 PM</a></td>
     <td><div class="p">Markland Woods</p></td>
     <td><div class="n">$22 Optional cart fee</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:42 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n"><p></p></n></td>
     </tr>
     
     
@@ -1019,7 +1475,14 @@
     </div><div id="myDropdown10" class="dropdown-content">
     <div class="dropdown_title">Wednesday June 7 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">10:00 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
@@ -1032,7 +1495,7 @@
     <table class="dropdown_table"><tr>
     <td><div class="a">10:30 AM</a></td>
     <td><div class="p">Galt Country Club</p></td>
-    <td><div class="n">$23.00 + HST cart fee per person</n></td>
+    <td><div class="n">$23 /player (mandatory cart fee)</n></td>
     </tr>
     
     
@@ -1046,8 +1509,35 @@
     <tr>
     <td><div class="a">12:00 PM</a></td>
     <td><div class="p">Whitevale Golf Club</p></td>
-    <td><div class="n">- $26/rider (mandatory cart fee)
-    -</n></td>
+    <td><div class="n">$26 /player  (mandatory cart fee)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">12:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">11:33 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n"><p></p></n></td>
     </tr>
     
     
@@ -1061,7 +1551,21 @@
     </div><div id="myDropdown12" class="dropdown-content">
     <div class="dropdown_title">Friday June 9 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">10:30 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">12:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
@@ -1113,6 +1617,34 @@
     </tr>
     
     
+    <tr>
+    <td><div class="a">11:30 AM</a></td>
+    <td><div class="p">Bay Of Quinte Golf Club</p></td>
+    <td><div class="n">$25 cart fee mandatory</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:21 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n">Lottery Times - confirmed Thursday prior</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:40 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
     </table>
     </div>
     </div>
@@ -1158,6 +1690,20 @@
     </tr>
     
     
+    <tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:40 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
     </table>
     </div>
     </div>
@@ -1168,10 +1714,46 @@
     </div><div id="myDropdown15" class="dropdown-content">
     <div class="dropdown_title">Monday June 12 - Tee Times</div>
     <div class="dropdown_table_holder">
-    <table class="dropdown_table"></table>
+    <table class="dropdown_table"><tr>
+    <td><div class="a">02:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">02:36 PM</a></td>
+    <td><div class="p">The Thornhill Club</p></td>
+    <td><div class="n"><p></p></n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:00 PM</a></td>
+    <td><div class="p">St. Andrew's East Golf Club</p></td>
+    <td><div class="n">Approximate Time - $50.00 (includes power cart)</n></td>
+    </tr>
+    
+    
+    <tr>
+    <td><div class="a">03:10 PM</a></td>
+    <td><div class="p">Lambton Golf & Country Club</p></td>
+    <td><div class="n">Mandatory Cart fee of $25 per player.</n></td>
+    </tr>
+    
+    
+    </table>
     </div>
     </div>
     <div class="vert_spacer"></div>
+    
     
     
 <!--- End inserting the code here --->                    
