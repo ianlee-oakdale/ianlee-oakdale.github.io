@@ -13,18 +13,18 @@
 
         <style>
 
-            body{
+body{
                 margin: 0;
-                background-color: #f5f4f0;
+                background: #f5f4f0;
             }
 
             .banner{
                 width: 100%;
-                height: 150px;
+                height: 130px;
                 background: #f5f4f0;
                 position: fixed;
-                box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-                z-index: 100;
+                box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+                z-index: 1000;
             }
 
             .banner_holder{
@@ -34,13 +34,14 @@
             }
 
             .title{
-                width: 40%;
+                width: 45%;
                 font-family: Arsenal;
                 color: #00705B;
-                font-size: 35;
+                font-size: 30;
                 position: absolute;
-                left: 30%;
+                left: 27.5%;
                 top: 15%;
+                font-weight: 700;
                 text-align: center;
             }
 
@@ -61,7 +62,7 @@
             .rules_button{
                 width: 13%;
                 position: absolute;
-                bottom: 10%;
+                bottom: 15%;
                 left: 30%;
                 text-align: center;
                 border-right-style: solid;
@@ -73,7 +74,7 @@
             .viewtimes_button{
                 width: 13%;
                 position: absolute;
-                bottom: 10%;
+                bottom: 15%;
                 left: 43%;
                 text-align: center;
                 border-right-style: solid;
@@ -84,7 +85,7 @@
             .requests_button{
                 width: 13%;
                 position: absolute;
-                bottom: 10%;
+                bottom: 15%;
                 left: 56%;
                 text-align: center;
                 color: #00705B;
@@ -154,7 +155,7 @@
                 left: 22.5%;
                 top: 23%;
                 background: #f5f4f0;
-                box-shadow: -4px 8px 16px 8px rgba(0,0,0,0.2);
+                box-shadow: -0.2px 0.4px 0.8px 0.4px rgba(0,0,0,0.2);
             }
 
             .main_content_holder{
@@ -184,10 +185,10 @@
 
             .main_content_questions{
                 position: absolute;
-                width: 80%;
+                width: 90%;
                 text-align: center;
-                bottom: 4%;
-                left: 10%;
+                bottom: 2%;
+                left: 5%;
                 font-family: Mukta;
                 font-size: 20;
             }
@@ -204,7 +205,7 @@
                 color: #f5f4f0;
                 font-family: Mukta;
                 font-size: 20;
-                padding: 10px;
+                padding: 3px;
                 border-radius: 5px;
                 background: #00705B;
             }
@@ -221,7 +222,7 @@
                 color: #f5f4f0;
                 font-family: Mukta;
                 font-size: 20;
-                padding: 10px;
+                padding: 3px;
                 border-radius: 5px;
                 background: #00705B;
             }
@@ -244,6 +245,250 @@
 
 
         </style>
+
+<style>
+
+    @media only screen and (max-width: 1400px){
+
+        
+        body{
+                    margin: 0;
+                    background-color: #f5f4f0;
+                }
+
+                .banner{
+                    width: 100%;
+                    height: 120px;
+                    background: #f5f4f0;
+                    position: fixed;
+                    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+                    z-index: 5000;
+                }
+
+                .banner_holder{
+                    width: 100%;
+                    height: 150px;
+                    position: relative;
+                }
+
+                .title{
+                    width: 80%;
+                    font-family: Arsenal;
+                    color: #00705B;
+                    font-size: 30;
+                    position: absolute;
+                    left: 10%;
+                    top: 19%;
+                    text-align: center;
+                    font-weight: 700;
+                }
+
+                .logo1{
+                    width: 7%;
+                    position: absolute;
+                    left: 5%;
+                    top: 10%;
+                }
+
+                .logo2{
+                    width: 7%;
+                    position: absolute;
+                    right: 5%;
+                    top: 10%;
+                }
+
+        .rules_button{
+            width: 20%;
+            position: absolute;
+            bottom: 20%;
+            left: 20%;
+            text-align: center;
+            border-right-style: solid;
+            border-right-color: #00705B;
+            color: #ffffff;
+            background-color: #00705b;
+        }
+
+        .viewtimes_button{
+            width: 20%;
+            position: absolute;
+            bottom: 20%;
+            left: 40%;
+            text-align: center;
+            border-right-style: solid;
+            border-right-color: #00705B;
+            color: #00705B;
+        }
+
+        .requests_button{
+            width: 20%;
+            position: absolute;
+            bottom: 20%;
+            left: 60%;
+            text-align: center;
+            color: #00705B;
+        }
+
+        .rules_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 20;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .viewtimes_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 20;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .requests_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 20;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+        .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+        .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+        .background1{
+            width: 100%;
+            height: 40%;
+            z-index: 1;
+            background: #f5f4f0;
+        }
+
+        .background2{
+            width: 100%;
+            height: 15%;
+            z-index: 1;
+            background: #00705B15;
+        }
+
+        .background3{
+            width: 100%;
+            height: 10%;
+            z-index: 1;
+            background: #DCBB0015;
+        }
+
+        .background4{
+            width: 100%;
+            height: 20%;
+            z-index: 1;
+            background: #f5f4f0;
+        }
+
+        .main_content{
+            z-index: 50;
+            position: absolute;
+            width: 90%;
+            height: 82%;
+            left: 5%;
+            top: 17%;
+            background: #f5f4f0;
+            box-shadow: none;
+        }
+
+        .main_content_holder{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .main_contect_title{
+            position: absolute;
+            width: 90%;
+            left: 5%;
+            text-align: center;
+            top: 2%;
+            font-family: Mukta;
+            font-size: 25;
+            font-weight: 600;
+        }
+
+        .main_content_text{
+            position: absolute;
+            width: 80%;
+            text-align: left;
+            top: 15%;
+            left: 10%;
+            font-family: Mukta;
+            font-size: 19;
+        }
+
+        .main_content_questions{
+            position: absolute;
+            width: 90%;
+            text-align: center;
+            bottom: 0%;
+            left: 5%;
+            font-family: Mukta;
+            font-size: 22;
+        }
+
+        .viewtimes_button_2{
+            width: 60%;
+            position: absolute;
+            bottom: 19%;
+            left: 20%;
+            text-align: center;
+            border-width: 1px;
+            border-color: #00705B;
+            border-style: solid;
+            color: #f5f4f0;
+            font-family: Mukta;
+            font-size: 19;
+            padding: 0.5%;
+            border-radius: 5px;
+            background: #00705B;
+            font-weight: 700;
+        }
+
+        .requests_button_2{
+            width: 60%;
+            position: absolute;
+            bottom: 11%;
+            left: 20%;
+            text-align: center;
+            border-width: 1px;
+            border-color: #00705B;
+            border-style: solid;
+            color: #f5f4f0;
+            font-family: Mukta;
+            font-size: 19;
+            padding: 0.5%;
+            border-radius: 5px;
+            background: #00705B;
+            font-weight: 700;
+        }
+
+        .viewtimes_button_2 a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .requests_button_2 a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .viewtimes_button_2:hover {background: #DCBB00;}
+
+        .requests_button_2:hover {background: #DCBB00;}
+
+    }
+
+    </style>
 
         <style>
 
