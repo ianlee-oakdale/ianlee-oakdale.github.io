@@ -321,7 +321,26 @@
         </script>
         
         
+        <script>
 
+        function myFunction52() {
+            document.getElementById("myDropdown1").classList.remove("show");
+            document.getElementById("myDropdown2").classList.remove("show");
+            document.getElementById("myDropdown3").classList.remove("show");
+            document.getElementById("myDropdown4").classList.remove("show");
+            document.getElementById("myDropdown5").classList.remove("show");
+            document.getElementById("myDropdown6").classList.remove("show");
+            document.getElementById("myDropdown7").classList.remove("show");
+            document.getElementById("myDropdown8").classList.remove("show");
+            document.getElementById("myDropdown9").classList.remove("show");
+            document.getElementById("myDropdown10").classList.remove("show");
+            document.getElementById("myDropdown11").classList.remove("show");
+            document.getElementById("myDropdown12").classList.remove("show");
+            document.getElementById("myDropdown13").classList.remove("show");
+            document.getElementById("myDropdown14").classList.remove("show");
+            document.getElementById("myDropdown15").classList.remove("show");
+        }
+        </script>
    
         
         
@@ -513,124 +532,146 @@
             
             .dropbtn:active {background-color: #DCBB00;}
 
+            button.close_button{
+                    display: none;
+                    width: 35%;
+                    position: absolute;
+                    left: 10%;
+                    top: 10%;
+                    background: #ed2939;
+                    display: block;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 15;
+                    color: #f5f4f0;
+                    border: none;
+                    border-radius: 5px;
+                }
+
         </style>
 
-<style media="all and (max-width:600px)">
+<style>
 
-            
-    body{
-        margin: 0;
-        background-color: #f5f4f0;
-    }
+    @media only screen and (max-width: 800px){
 
-    .banner{
-        width: 100%;
-        height: 250px;
-        background: #f5f4f0;
-        position: fixed;
-        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-        z-index: 100;
-    }
+        
+        body{
+            margin: 0;
+            background-color: #f5f4f0;
+        }
 
-    .banner_holder{
-        width: 100%;
-        height: 150px;
-        position: relative;
-    }
+        .banner{
+            width: 100%;
+            height: 90px;
+            background: #f5f4f0;
+            position: fixed;
+            box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
 
-    .title{
-        width: 80%;
-        font-family: Arsenal;
-        color: #00705B;
-        font-size: 35;
-        position: absolute;
-        left: 10%;
-        top: 19%;
-        text-align: center;
-    }
+        .banner_holder{
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
 
-    .logo1{
-        width: 8%;
-        position: absolute;
-        left: 2%;
-        top: 10%;
-    }
+        .title{
+            width: 80%;
+            font-family: Arsenal;
+            color: #00705B;
+            font-size: 15;
+            position: absolute;
+            left: 10%;
+            top: 19%;
+            text-align: center;
+            font-weight: 700;
+        }
 
-    .logo2{
-        width: 8%;
-        position: absolute;
-        right: 2%;
-        top: 10%;
-    }
+        .logo1{
+            width: 8%;
+            position: absolute;
+            left: 2%;
+            top: 10%;
+        }
 
-    .rules_button{
-        width: 30%;
-        position: absolute;
-        bottom: -50%;
-        left: 5%;
-        text-align: center;
-        border-right-style: solid;
-        border-right-color: #00705B;
-        color: #00705B;
-    }
+        .logo2{
+            width: 8%;
+            position: absolute;
+            right: 2%;
+            top: 10%;
+        }
 
-    .viewtimes_button{
-        width: 30%;
-        position: absolute;
-        bottom: -50%;
-        left: 35%;
-        text-align: center;
-        border-right-style: solid;
-        border-right-color: #00705B;
-        color: #00705B;
-    }
+        .rules_button{
+            width: 30%;
+            position: absolute;
+            bottom: 40%;
+            left: 5%;
+            text-align: center;
+            border-right-style: solid;
+            border-right-color: #00705B;
+            color: #00705b;
+        }
 
-    .requests_button{
-        width: 30%;
-        position: absolute;
-        bottom: -50%;
-        left: 65%;
-        text-align: center;
-        color: #00705B;
-        color: #ffffff;
-        background-color: #00705B;
-    }
+        .viewtimes_button{
+            width: 30%;
+            position: absolute;
+            bottom: 40%;
+            left: 35%;
+            text-align: center;
+            border-right-style: solid;
+            border-right-color: #00705B;
+            color: #00705b;
+        }
 
-    .rules_button a{
-        color: inherit;
-        font-family: Mukta;
-        font-size: 30;
-        text-decoration: none;
-    }
+        .requests_button{
+            width: 30%;
+            position: absolute;
+            bottom: 40%;
+            left: 65%;
+            text-align: center;
+            color: #ffffff;
+            background-color: #00705b;
+        }
 
-    .viewtimes_button a{
-        color: inherit;
-        font-family: Mukta;
-        font-size: 30;
-        text-decoration: none;
-    }
+        .rules_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 13;
+            text-decoration: none;
+            font-weight: 700;
+        }
 
-    .requests_button a{
-        color: inherit;
-        font-family: Mukta;
-        font-size: 30;
-        text-decoration: none;
-    }
+        .viewtimes_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 13;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .requests_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 13;
+            text-decoration: none;
+            font-weight: 700;
+        }
 
 
-    .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+        .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
 
-    .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+        .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
 
-    .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+        .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
 
-    .dates_holder{
-                width: 35%;
+        .dates_holder{
+                width: 98%;
                 left: 2%;
-                position: fixed;
-                height: 78%;
-                top: 20%;
-                box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+                position: absolute;
+                height: 83%;
+                top: 15%;
+                box-shadow: none;
             }
 
             .date_relative_holder{
@@ -645,12 +686,13 @@
                 text-align: center;
                 top: 2%;
                 font-family: Mukta; 
-                font-size: 20;
+                font-size: 16;
+                font-weight: 700;
             }
 
             .vert_spacer{
                 width: 100%;
-                height: 5px;
+                height: 8px;
             }
 
             .vert_spacer2{
@@ -665,17 +707,17 @@
             }
 
             .dropbtn{
-                background-color: #00705b;
+                background-color: #00705bcc;
                 color: white;
                 padding: 2px;
-                font-size: 20px;
+                font-size: 16px;
                 font-family: Mukta;
                 border-radius: 5px;
                 border: none;
                 cursor: pointer;
-                width: 50%;
+                width: 70%;
                 position: relative;
-                left: 25%;
+                left: 15%;
                 top: 0px; 
                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
             }
@@ -684,11 +726,10 @@
                 display: none;
                 position: absolute;
                 background-color: #f5f4f0;
-                width: 150%;
+                width: 100%;
                 height: 100%;
-                top: -2%;
-                left: 120%;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                top: 0%;
+                left: 0;
                 z-index: 900;
             }
 
@@ -700,9 +741,25 @@
             
             .dropbtn:active {background-color: #DCBB00;}
 
+            button.close_button{
+                    width: 30%;
+                    position: absolute;
+                    left: 0%;
+                    top: 0%;
+                    background: #ed2939;
+                    display: block;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 15;
+                    color: #f5f4f0;
+                    border: none;
+                    border-radius: 0px;
+                }
+
+
+        }
     </style>
-
-
 
     </head>
 
@@ -748,6 +805,7 @@
                 </div>
 
                 <div id="myDropdown1" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230755507232250"></script>
                     
                 </div>
@@ -761,6 +819,7 @@
                 </div>
 
                 <div id="myDropdown2" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825066548258"></script>
                    
                 </div>
@@ -775,6 +834,7 @@
                 </div>
 
                 <div id="myDropdown3" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825064897263"></script>
                     
                 </div>
@@ -789,6 +849,7 @@
                     
                 </div>
                 <div id="myDropdown4" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230824975147261"></script>
                     
                 </div>
@@ -802,6 +863,7 @@
                     <button onclick="myFunction5()" class="dropbtn">Friday June 2</button>
                 </div>
                 <div id="myDropdown5" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230824601921247"></script>
                     
                 </div>
@@ -814,6 +876,7 @@
                     <button onclick="myFunction6()" class="dropbtn">Saturday June 3</button>
                 </div>
                 <div id="myDropdown6" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825475149259"></script>
                     
                 </div>
@@ -826,6 +889,7 @@
                     <button onclick="myFunction7()" class="dropbtn">Sunday June 4</button>
                 </div>
                 <div id="myDropdown7" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230824633490253"></script>
                     
                 </div>
@@ -838,6 +902,7 @@
                     <button onclick="myFunction8()" class="dropbtn">Monday June 5</button>
                 </div>
                 <div id="myDropdown8" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825223942251"></script>
                     
                 </div>
@@ -850,6 +915,7 @@
                     <button onclick="myFunction9()" class="dropbtn">Tuesday June 6</button>
                 </div>
                 <div id="myDropdown9" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825715183254"></script>
                     
                 </div>
@@ -862,6 +928,7 @@
                     <button onclick="myFunction10()" class="dropbtn">Wednesday June 7</button>
                 </div>
                 <div id="myDropdown10" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825712279257"></script>
                     
                 </div>
@@ -874,6 +941,7 @@
                     <button onclick="myFunction11()" class="dropbtn">Thursday June 8</button>
                 </div>
                 <div id="myDropdown11" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825329971260"></script>
                     
                 </div>
@@ -886,6 +954,7 @@
                     <button onclick="myFunction12()" class="dropbtn">Friday June 9</button>
                 </div>
                 <div id="myDropdown12" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230824974827265"></script>
                     
                 </div>
@@ -902,6 +971,7 @@
                 </div>
 
                 <div id="myDropdown13" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825340917253"></script>
                    
                 </div>
@@ -916,6 +986,7 @@
                 </div>
 
                 <div id="myDropdown14" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825712413247"></script>
                     
                 </div>
@@ -929,6 +1000,7 @@
                     <button onclick="myFunction15()" class="dropbtn">Monday June 12</button>
                 </div>
                 <div id="myDropdown15" class="dropdown-content">
+                    <button onclick="myFunction52()" class="close_button" id="close_button">Close</button>
                     <script type="text/javascript" src="https://form.jotform.com/jsform/230825448191256"></script>
                     
                 </div>
