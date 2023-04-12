@@ -3,7 +3,7 @@
     <head>
 
    
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -15,16 +15,16 @@
 
 body{
                 margin: 0;
-                background-color: #f5f4f0;
+                background: #f5f4f0;
             }
 
             .banner{
                 width: 100%;
-                height: 150px;
+                height: 130px;
                 background: #f5f4f0;
                 position: fixed;
-                box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
-                z-index: 100;
+                box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+                z-index: 1000;
             }
 
             .banner_holder{
@@ -34,13 +34,14 @@ body{
             }
 
             .title{
-                width: 40%;
+                width: 45%;
                 font-family: Arsenal;
                 color: #00705B;
-                font-size: 35;
+                font-size: 30;
                 position: absolute;
-                left: 30%;
+                left: 27.5%;
                 top: 15%;
+                font-weight: 700;
                 text-align: center;
             }
 
@@ -61,7 +62,7 @@ body{
             .rules_button{
                 width: 13%;
                 position: absolute;
-                bottom: 10%;
+                bottom: 15%;
                 left: 30%;
                 text-align: center;
                 border-right-style: solid;
@@ -73,7 +74,7 @@ body{
             .viewtimes_button{
                 width: 13%;
                 position: absolute;
-                bottom: 10%;
+                bottom: 15%;
                 left: 43%;
                 text-align: center;
                 border-right-style: solid;
@@ -84,7 +85,7 @@ body{
             .requests_button{
                 width: 13%;
                 position: absolute;
-                bottom: 10%;
+                bottom: 15%;
                 left: 56%;
                 text-align: center;
                 color: #00705B;
@@ -149,12 +150,12 @@ body{
             .main_content{
                 z-index: 50;
                 position: absolute;
-                width: 50%;
+                width: 55%;
                 height: 70%;
-                left: 25%;
+                left: 22.5%;
                 top: 23%;
                 background: #f5f4f0;
-                box-shadow: -4px 8px 16px 8px rgba(0,0,0,0.2);
+                box-shadow: -0.2px 0.4px 0.8px 0.4px rgba(0,0,0,0.2);
             }
 
             .main_content_holder{
@@ -176,18 +177,18 @@ body{
                 position: absolute;
                 width: 80%;
                 text-align: left;
-                top: 15%;
-                left: 10%;
-                font-family: Mukta;
+                top: 10%;
+                left: 5%;
+                font-family: 'Times New Roman', Times, serif;
                 font-size: 20;
             }
 
             .main_content_questions{
                 position: absolute;
-                width: 80%;
+                width: 90%;
                 text-align: center;
-                bottom: 4%;
-                left: 10%;
+                bottom: 2%;
+                left: 5%;
                 font-family: Mukta;
                 font-size: 20;
             }
@@ -195,7 +196,7 @@ body{
             .viewtimes_button_2{
                 width: 40%;
                 position: absolute;
-                bottom: 16%;
+                bottom: 14%;
                 left: 6.5%;
                 text-align: center;
                 border-width: 1px;
@@ -204,7 +205,7 @@ body{
                 color: #f5f4f0;
                 font-family: Mukta;
                 font-size: 20;
-                padding: 10px;
+                padding: 3px;
                 border-radius: 5px;
                 background: #00705B;
             }
@@ -212,7 +213,7 @@ body{
             .requests_button_2{
                 width: 40%;
                 position: absolute;
-                bottom: 16%;
+                bottom: 14%;
                 right: 6.5%;
                 text-align: center;
                 border-width: 1px;
@@ -221,7 +222,7 @@ body{
                 color: #f5f4f0;
                 font-family: Mukta;
                 font-size: 20;
-                padding: 10px;
+                padding: 3px;
                 border-radius: 5px;
                 background: #00705B;
             }
@@ -245,9 +246,253 @@ body{
 
         </style>
 
+<style>
+
+    @media only screen and (max-width: 1400px){
+
+        
+        body{
+                    margin: 0;
+                    background-color: #f5f4f0;
+                }
+
+                .banner{
+                    width: 100%;
+                    height: 120px;
+                    background: #f5f4f0;
+                    position: fixed;
+                    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2);
+                    z-index: 5000;
+                }
+
+                .banner_holder{
+                    width: 100%;
+                    height: 150px;
+                    position: relative;
+                }
+
+                .title{
+                    width: 80%;
+                    font-family: Arsenal;
+                    color: #00705B;
+                    font-size: 30;
+                    position: absolute;
+                    left: 10%;
+                    top: 19%;
+                    text-align: center;
+                    font-weight: 700;
+                }
+
+                .logo1{
+                    width: 7%;
+                    position: absolute;
+                    left: 5%;
+                    top: 10%;
+                }
+
+                .logo2{
+                    width: 7%;
+                    position: absolute;
+                    right: 5%;
+                    top: 10%;
+                }
+
+        .rules_button{
+            width: 20%;
+            position: absolute;
+            bottom: 20%;
+            left: 20%;
+            text-align: center;
+            border-right-style: solid;
+            border-right-color: #00705B;
+            color: #ffffff;
+            background-color: #00705b;
+        }
+
+        .viewtimes_button{
+            width: 20%;
+            position: absolute;
+            bottom: 20%;
+            left: 40%;
+            text-align: center;
+            border-right-style: solid;
+            border-right-color: #00705B;
+            color: #00705B;
+        }
+
+        .requests_button{
+            width: 20%;
+            position: absolute;
+            bottom: 20%;
+            left: 60%;
+            text-align: center;
+            color: #00705B;
+        }
+
+        .rules_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 20;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .viewtimes_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 20;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .requests_button a{
+            color: inherit;
+            font-family: Mukta;
+            font-size: 20;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+
+        .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+        .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+        .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+        .background1{
+            width: 100%;
+            height: 40%;
+            z-index: 1;
+            background: #f5f4f0;
+        }
+
+        .background2{
+            width: 100%;
+            height: 15%;
+            z-index: 1;
+            background: #00705B15;
+        }
+
+        .background3{
+            width: 100%;
+            height: 10%;
+            z-index: 1;
+            background: #DCBB0015;
+        }
+
+        .background4{
+            width: 100%;
+            height: 20%;
+            z-index: 1;
+            background: #f5f4f0;
+        }
+
+        .main_content{
+            z-index: 50;
+            position: absolute;
+            width: 90%;
+            height: 82%;
+            left: 5%;
+            top: 17%;
+            background: #f5f4f0;
+            box-shadow: none;
+        }
+
+        .main_content_holder{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .main_contect_title{
+            position: absolute;
+            width: 90%;
+            left: 5%;
+            text-align: center;
+            top: 2%;
+            font-family: Mukta;
+            font-size: 25;
+            font-weight: 600;
+        }
+
+        .main_content_text{
+            position: absolute;
+            width: 80%;
+            text-align: left;
+            top: 15%;
+            left: 10%;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 16;
+        }
+
+        .main_content_questions{
+            position: absolute;
+            width: 90%;
+            text-align: center;
+            bottom: 0%;
+            left: 5%;
+            font-family: Mukta;
+            font-size: 22;
+        }
+
+        .viewtimes_button_2{
+            width: 60%;
+            position: absolute;
+            bottom: 19%;
+            left: 20%;
+            text-align: center;
+            border-width: 1px;
+            border-color: #00705B;
+            border-style: solid;
+            color: #f5f4f0;
+            font-family: Mukta;
+            font-size: 19;
+            padding: 0.5%;
+            border-radius: 5px;
+            background: #00705B;
+            font-weight: 700;
+        }
+
+        .requests_button_2{
+            width: 60%;
+            position: absolute;
+            bottom: 11%;
+            left: 20%;
+            text-align: center;
+            border-width: 1px;
+            border-color: #00705B;
+            border-style: solid;
+            color: #f5f4f0;
+            font-family: Mukta;
+            font-size: 19;
+            padding: 0.5%;
+            border-radius: 5px;
+            background: #00705B;
+            font-weight: 700;
+        }
+
+        .viewtimes_button_2 a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .requests_button_2 a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .viewtimes_button_2:hover {background: #DCBB00;}
+
+        .requests_button_2:hover {background: #DCBB00;}
+
+    }
+
+    </style>
+
         <style>
 
-        @media only screen and (max-width: 601px){
+        @media only screen and (max-width: 800px){
 
             
             body{
@@ -257,7 +502,7 @@ body{
 
             .banner{
                 width: 100%;
-                height: 250px;
+                height: 90px;
                 background: #f5f4f0;
                 position: fixed;
                 box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
@@ -274,11 +519,12 @@ body{
                 width: 80%;
                 font-family: Arsenal;
                 color: #00705B;
-                font-size: 35;
+                font-size: 15;
                 position: absolute;
                 left: 10%;
                 top: 19%;
                 text-align: center;
+                font-weight: 700;
             }
 
             .logo1{
@@ -298,7 +544,7 @@ body{
             .rules_button{
                 width: 30%;
                 position: absolute;
-                bottom: -50%;
+                bottom: 40%;
                 left: 5%;
                 text-align: center;
                 border-right-style: solid;
@@ -310,7 +556,7 @@ body{
             .viewtimes_button{
                 width: 30%;
                 position: absolute;
-                bottom: -50%;
+                bottom: 40%;
                 left: 35%;
                 text-align: center;
                 border-right-style: solid;
@@ -321,7 +567,7 @@ body{
             .requests_button{
                 width: 30%;
                 position: absolute;
-                bottom: -50%;
+                bottom: 40%;
                 left: 65%;
                 text-align: center;
                 color: #00705B;
@@ -330,22 +576,25 @@ body{
             .rules_button a{
                 color: inherit;
                 font-family: Mukta;
-                font-size: 30;
+                font-size: 13;
                 text-decoration: none;
+                font-weight: 700;
             }
 
             .viewtimes_button a{
                 color: inherit;
                 font-family: Mukta;
-                font-size: 30;
+                font-size: 13;
                 text-decoration: none;
+                font-weight: 700;
             }
 
             .requests_button a{
                 color: inherit;
                 font-family: Mukta;
-                font-size: 30;
+                font-size: 13;
                 text-decoration: none;
+                font-weight: 700;
             }
 
 
@@ -387,9 +636,9 @@ body{
                 z-index: 50;
                 position: absolute;
                 width: 90%;
-                height: 82%;
+                height: 100%;
                 left: 5%;
-                top: 15%;
+                top: 17%;
                 background: #f5f4f0;
                 box-shadow: -4px 8px 16px 8px rgba(0,0,0,0.2);
             }
@@ -402,65 +651,69 @@ body{
 
             .main_contect_title{
                 position: absolute;
-                width: 100%;
+                width: 90%;
+                left: 5%;
                 text-align: center;
                 top: 2%;
                 font-family: Mukta;
-                font-size: 33;
+                font-size: 17;
+                font-weight: 600;
             }
 
             .main_content_text{
                 position: absolute;
-                width: 80%;
+                width: 98%;
                 text-align: left;
-                top: 15%;
-                left: 10%;
-                font-family: Mukta;
-                font-size: 28;
+                top: 13%;
+                left: 2%;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 13;
             }
 
             .main_content_questions{
                 position: absolute;
                 width: 90%;
                 text-align: center;
-                bottom: 2%;
+                bottom: 1%;
                 left: 5%;
                 font-family: Mukta;
-                font-size: 28;
+                font-size: 16;
             }
 
             .viewtimes_button_2{
                 width: 80%;
                 position: absolute;
-                bottom: 18%;
-                left: 10%;
+                bottom: 21%;
+                left: 8.5%;
                 text-align: center;
                 border-width: 1px;
                 border-color: #00705B;
                 border-style: solid;
                 color: #f5f4f0;
                 font-family: Mukta;
-                font-size: 30;
-                padding: 15px;
+                font-size: 16;
+                padding: 1.5%;
                 border-radius: 5px;
                 background: #00705B;
+                font-weight: 700;
             }
 
             .requests_button_2{
                 width: 80%;
                 position: absolute;
-                bottom: 9%;
-                left: 10%;
+                bottom: 12%;
+                left: 8.5%;
                 text-align: center;
                 border-width: 1px;
                 border-color: #00705B;
                 border-style: solid;
                 color: #f5f4f0;
                 font-family: Mukta;
-                font-size: 30;
-                padding: 15px;
+                font-size: 16;
+                padding: 1.5%;
                 border-radius: 5px;
                 background: #00705B;
+                font-weight: 700;
             }
 
             .viewtimes_button_2 a{
@@ -519,10 +772,21 @@ body{
         <div class="main_content">
             <div class="main_content_holder">
                 <div class="main_contect_title">
-                    Rules and Restrictions for Reciprocal Tee Times
+                    Please read the below rules before making any Tee Time requests
                 </div>
                 <div class="main_content_text">
-                    Insert Text on Rules and restrictions header
+                    <ul style=" line-height: 1.7;">
+                    <li>Please communicate with your group before making a request - multiple requests made from the same group will be ignored in the lottery</li>
+                    <li>Guests are not permitted</li>
+                    <li>You are responsible for any fees associated with your Tee Time </li>
+                    <li>Abuse of the reciprocal program including no-shows, bringing guests or general disrespect may result in loss of future Tee Times </li>
+                    <li>Members will be limited to 2 Requests per day </li>
+                    <li>Tee Time requests must be for a minimum of two players - twosomes will be matched up to maximize avilable tee times </li>
+                    <li>Please refer to the home clubs website for their Dress Code and any other Policies </li>
+
+                    </ul>
+                    <strong> Thank You!</strong>
+
                 </div>
                 <div class="main_content_questions">
                     If you have any questions or concerns please contact aarychuk@oakdalegolf.com
