@@ -1,0 +1,220 @@
+<html>
+
+	<head>
+
+		<meta http-equiv="refresh" content="600">
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+		</script>
+
+		<script>
+
+			
+		</script>
+
+		<script>
+			window.addEventListener("load", () => {
+		clock();
+		function clock() {
+		const today = new Date();
+
+		// get time components
+		const hours = today.getHours();
+		const minutes = today.getMinutes();
+		const seconds = today.getSeconds();
+
+		//add '0' to hour, minute & second when they are less 10
+		const hour = hours < 10 ? "0" + hours : hours;
+		const minute = minutes < 10 ? "0" + minutes : minutes;
+		const second = seconds < 10 ? "0" + seconds : seconds;
+
+		//make clock a 12-hour time clock
+		const hourTime = hour > 12 ? hour - 12 : hour;
+
+		// if (hour === 0) {
+		//   hour = 12;
+		// }
+		//assigning 'am' or 'pm' to indicate time of the day
+		const ampm = hour < 12 ? "AM" : "PM";
+
+
+		const time = hourTime + ":" + minute + " " + ampm;
+
+
+
+		//print current date and time to the DOM
+		document.getElementById("date-time").innerHTML = time;
+		setTimeout(clock, 1000);
+		}
+			});
+			</script>
+			<script>
+			window.addEventListener("load", () => {
+		daydate();
+		function daydate() {
+		const today = new Date();
+
+
+		// get date components
+		const month = today.getMonth();
+		const weekday = today.getDay();
+		const day = today.getDate();
+
+		//declaring a list of all months in  a year
+		const monthList = [
+		"January",
+		"February",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"August",
+		"September",
+		"October",
+		"November",
+		"December"
+		];
+
+			const daysofweek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+		//get current date and time
+		const dateofmonth = daysofweek[weekday]+", "+monthList[month]+" "+day;
+
+
+		//print current date and time to the DOM
+		document.getElementById("calendar").innerHTML = dateofmonth;
+		}
+			});
+		</script>
+
+		<style>
+		@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Segoe UI&family=Tilt+Neon&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600&display=swap');
+		@import url('https://fonts.cdnfonts.com/css/mark-pro');
+		</style>
+
+		<style>
+
+			body{
+				margin: 0;
+				background: #ffffff;				
+			}
+
+			.title_holder{
+				background: #ffffff;
+				position: absolute;
+				top: 0px;
+				left: 4%;
+				width: 26%;
+				height: 18.1%;
+				background: #ffffff;
+				border-bottom-right-radius: 4px;
+				box-shadow: rgba(255, 255, 255, 0.5) 2px 2px 0px 3px;
+			}
+
+			.logo_holder{
+				position: absolute;
+				width: 85%;
+				left: 7.5%;
+				top: 5px;
+			}
+
+			.title_relative_holder{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
+			div.timer{
+				position: absolute;
+				color: #343434;
+				font-size: 33px;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+				font-weight: 700;
+				right: 7%;
+				top: 15px;
+			}
+
+			div.showdate{
+				position: absolute;
+				color: #343434;
+				font-size: 25px;
+				left: 53%;
+				top: 20px;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}	
+
+			h1 {font-weight: 500;}
+
+			div.today_weather{
+				height: 300px;
+				width: 300px;
+				position: relative;
+				left: 75px;
+				top: 200px;
+				background: #0060aa;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="title_holder">
+			<div class="title_relative_holder">
+
+				<div class="logo_holder">
+					<img width="100%;" src="https://i.imgur.com/NNDCr0c.png">
+				</div>
+
+			</div>
+		</div>
+
+		<div id="clock"  class="timer">
+			<nobr><h2 id="date-time"></h2></nobr>
+		</div>
+
+		<div id="daydate" class="showdate">
+			<nobr><h1 id="calendar"></h1></nobr>
+		</div>
+
+		<div class="today_weather">
+			Toronto:
+			<br>
+
+			<py-script>
+				import requests
+
+				# API key for OpenWeatherMap
+				API_KEY = "725f72d3953a51c26fcddf41dceb5bde"
+
+				# API endpoint for Toronto weather
+				url = "http://api.openweathermap.org/data/2.5/weather?q=Toronto&appid=" + API_KEY
+
+				# Get weather information for Toronto
+				response = requests.get(url)
+				data = response.json()
+
+				# Get the temperature, weather description, and weather icon
+				temp = data['main']['temp']
+				weather_description = data['weather'][0]['description']
+				weather_icon = data['weather'][0]['icon']
+
+				cel=int(temp)-273
+
+				ww_temp=(str(cel)+chr(176)+' C')
+				ww_descript=weather_description.title()
+
+				display(temp)
+				display(weather_description)
+			</py-script>
+		</div>
+
+
+	</body>
+
+</html>
