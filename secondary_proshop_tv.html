@@ -2,7 +2,7 @@
 
 	<head>
 
-		<meta http-equiv="refresh" content="160">
+		<meta http-equiv="refresh" content="200">
 
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
@@ -12,6 +12,7 @@
 	         src gfore (1:19) "https://www.youtube.com/embed/wrS6Hccn_VU?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
 			 src Paradigm (0:30) "https://www.youtube.com/embed/aGJajFJjBSY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
 			 src Nike (0:15)  "https://www.youtube.com/embed/X9-mieY7_jQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
+			 src galvin (0:15) "https://www.youtube.com/embed/Yx6YLi48tzY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
 	
 
 --->
@@ -28,6 +29,10 @@
 				setTimeout(function(){
 					document.getElementById("ad1").src="https://www.youtube.com/embed/X9-mieY7_jQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080";
 				}, 138000);
+				setTimeout(function(){
+					document.getElementById("ad1").src="https://www.youtube.com/embed/Yx6YLi48tzY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080";
+				}, 153000);
+
 				setTimeout(function(){
 					$("#footjoy").css("background","none");
 				}, 2000);
@@ -68,8 +73,21 @@
 					$("#nike").css("background","none");
 				}, 141000);
 				setTimeout(function(){
-					$("#nike_logo").css("opacity","none");
+					$("#nike_logo").css("opacity","0");
 				}, 143000);
+				setTimeout(function(){
+					$("#galvin").css("background","#ffffff");
+				}, 151000);
+				setTimeout(function(){
+					$("#galvin_logo").css("opacity","1");
+				}, 152000);
+				setTimeout(function(){
+					$("#galvin").css("background","none");
+				}, 154000);
+				setTimeout(function(){
+					$("#galvin_logo").css("opacity","0");
+				}, 155000);
+	
 			};
 		</script>
 
@@ -316,6 +334,12 @@
 		<div id="nike" class="gfore">
 			<div class="gfore_relative">
 				<img id="nike_logo" width="30%" style="position: absolute; left: 3523%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://www.pngmart.com/files/4/Nike-Logo-PNG-Pic.png">
+			</div>
+		</div>
+
+		<div id="galvin" class="gfore">
+			<div class="gfore_relative">
+				<img id="galvin_logo" width="30%" style="position: absolute; left: 3523%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://flashgolf.co.uk/wp-content/uploads/2020/08/galvin-green-logo-golf.png">
 			</div>
 		</div>
 
