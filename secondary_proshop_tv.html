@@ -11,6 +11,7 @@
 <!--- iframe src FJ (0:31) "https://www.youtube.com/embed/uGYLXnQpS8k?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
 	         src gfore (1:19) "https://www.youtube.com/embed/wrS6Hccn_VU?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
 			 src Paradigm (0:30) "https://www.youtube.com/embed/aGJajFJjBSY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
+			 src Nike (0:15)  "https://www.youtube.com/embed/X9-mieY7_jQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
 	
 
 --->
@@ -24,6 +25,9 @@
 				setTimeout(function(){
 					document.getElementById("ad1").src="https://www.youtube.com/embed/aGJajFJjBSY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080";
 				}, 108000);
+				setTimeout(function(){
+					document.getElementById("ad1").src="https://www.youtube.com/embed/X9-mieY7_jQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080";
+				}, 138000);
 				setTimeout(function(){
 					$("#footjoy").css("background","none");
 				}, 2000);
@@ -55,11 +59,17 @@
 					$("#callaway_logo").css("opacity","0");
 				}, 113000);
 				setTimeout(function(){
-					$("#callaway").css("background","#ffffff");
+					$("#nike").css("background","#ffffff");
 				}, 137000);
 				setTimeout(function(){
-					$("#callaway_logo").css("opacity","1");
+					$("#nike_logo").css("opacity","1");
 				}, 139000);
+				setTimeout(function(){
+					$("#nike").css("background","none");
+				}, 141000);
+				setTimeout(function(){
+					$("#nike_logo").css("opacity","none");
+				}, 143000);
 			};
 		</script>
 
@@ -299,7 +309,13 @@
 
 		<div id="callaway" class="gfore">
 			<div class="gfore_relative">
-				<img id="callaway_logo" width="30%" style="position: absolute; left: 35%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Callaway_Golf_Company_logo.svg/2560px-Callaway_Golf_Company_logo.svg.png">
+				<img id="callaway_logo" width="30%" style="position: absolute; left: 3523%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Callaway_Golf_Company_logo.svg/2560px-Callaway_Golf_Company_logo.svg.png">
+			</div>
+		</div>
+
+		<div id="nike" class="gfore">
+			<div class="gfore_relative">
+				<img id="nike_logo" width="30%" style="position: absolute; left: 3523%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://www.pngmart.com/files/4/Nike-Logo-PNG-Pic.png">
 			</div>
 		</div>
 
