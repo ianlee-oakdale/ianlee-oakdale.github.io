@@ -2,18 +2,68 @@
 
 	<head>
 
-		<meta http-equiv="refresh" content="600">
+		<meta http-equiv="refresh" content="160">
+
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
 		</script>
 
-		<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-		<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+<!--- iframe src FJ (0:31) "https://www.youtube.com/embed/uGYLXnQpS8k?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
+	         src gfore (1:19) "https://www.youtube.com/embed/wrS6Hccn_VU?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
+			 src Paradigm (0:30) "https://www.youtube.com/embed/aGJajFJjBSY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080"
+	
+
+--->
+			
 
 		<script>
-
-			
+			window.onload = function(){
+				setTimeout(function(){
+					document.getElementById("ad1").src="https://www.youtube.com/embed/wrS6Hccn_VU?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080";
+				}, 33000);
+				setTimeout(function(){
+					document.getElementById("ad1").src="https://www.youtube.com/embed/aGJajFJjBSY?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080";
+				}, 108000);
+				setTimeout(function(){
+					$("#footjoy").css("background","none");
+				}, 2000);
+				setTimeout(function(){
+					$("#footjoy_logo").css("opacity","0");
+				}, 4000);
+				setTimeout(function(){
+					$("#gfore").css("background","#ffffff");
+				}, 27000);
+				setTimeout(function(){
+					$("#gfore_logo").css("opacity","1");
+				}, 30000);
+				setTimeout(function(){
+					$("#gfore").css("background","none");
+				}, 36000);
+				setTimeout(function(){
+					$("#gfore_logo").css("opacity","0");
+				}, 38000);
+				setTimeout(function(){
+					$("#callaway").css("background","#ffffff");
+				}, 106000);
+				setTimeout(function(){
+					$("#callaway_logo").css("opacity","1");
+				}, 108000);
+				setTimeout(function(){
+					$("#callaway").css("background","none");
+				}, 111000);
+				setTimeout(function(){
+					$("#callaway_logo").css("opacity","0");
+				}, 113000);
+				setTimeout(function(){
+					$("#callaway").css("background","#ffffff");
+				}, 137000);
+				setTimeout(function(){
+					$("#callaway_logo").css("opacity","1");
+				}, 139000);
+			};
 		</script>
+
+
 
 		<script>
 			window.addEventListener("load", () => {
@@ -109,20 +159,19 @@
 			.title_holder{
 				background: #ffffff;
 				position: absolute;
-				top: 0px;
-				left: 4%;
+				top: 10px;
+				left: 0px;
 				width: 26%;
-				height: 18.1%;
+				height: 14%;
 				background: #ffffff;
 				border-bottom-right-radius: 4px;
-				box-shadow: rgba(255, 255, 255, 0.5) 2px 2px 0px 3px;
 			}
 
 			.logo_holder{
 				position: absolute;
-				width: 85%;
-				left: 7.5%;
-				top: 5px;
+				width: 75%;
+				left: 12.5%;
+				top: 0;
 			}
 
 			.title_relative_holder{
@@ -134,32 +183,70 @@
 			div.timer{
 				position: absolute;
 				color: #343434;
-				font-size: 33px;
+				font-size: 16px;
 				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 				font-weight: 700;
-				right: 7%;
-				top: 15px;
+				right: 30%;
+				top: 35px;
 			}
 
 			div.showdate{
 				position: absolute;
 				color: #343434;
-				font-size: 25px;
-				left: 53%;
-				top: 20px;
+				font-size: 12px;
+				right: 30%;
+				top: 0px;
 				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			}	
 
 			h1 {font-weight: 500;}
 
 			div.today_weather{
-				height: 300px;
-				width: 300px;
-				position: relative;
-				left: 75px;
-				top: 200px;
-				background: #0060aa;
+				position: absolute;
+				width: 212px;
+				border: solid 25px #1f567c;
+				right: 50px;
+				top: 65px;
 			}
+
+			div.iframe_holder{
+				position: absolute;
+				top: 120px;
+				left: 45px;
+			}
+
+			div.footjoy{
+				position: absolute;
+				top: 120px;
+				left: 45px;
+				width: 850px;
+				height: 478px;
+				background-color: #ffffff;
+				transition: all ease-in-out 2s;
+			}
+
+			div.footjoy_relative{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
+			div.gfore{
+				position: absolute;
+				top: 120px;
+				left: 45px;
+				width: 850px;
+				height: 478px;
+				background: none;
+				transition: all ease-in-out 2s;
+			}
+
+			div.gfore_relative{
+				width: 100%;
+				height: 100%;
+				position: relative;
+			}
+
 
 		</style>
 
@@ -186,14 +273,35 @@
 		</div>
 
 		<div class="today_weather">
-			Toronto:
-			<br>
+			<a class="weatherwidget-io" href="https://forecast7.com/en/43d65n79d38/toronto/" data-label_1="TORONTO" data-font="Play" data-icons="Climacons" data-days="5" data-theme="original" >TORONTO</a>
+			<script>
+			!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+			</script>
+		</div>
+	
 
-			<py-script src="python_file_test.py">
-
-			</py-script>
+		<div class="iframe_holder">
+			<iframe id="ad1" class="advert" width="850" height="478" style="border: none" src="https://www.youtube.com/embed/uGYLXnQpS8k?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&vq=hd1080">
+			</iframe>
 		</div>
 
+		<div id="footjoy" class="footjoy">
+			<div class="footjoy_relative">
+				<img id="footjoy_logo" width="30%" style="position: absolute; left: 35%; top: 20%; transition: all ease-in-out 1s" src="https://www.logolynx.com/images/logolynx/83/8350d95fa4b04eb00f5f434946e30094.jpeg">
+			</div>
+		</div>
+
+		<div id="gfore" class="gfore">
+			<div class="gfore_relative">
+				<img id="gfore_logo" width="60%" style="position: absolute; left: 20%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://cdn.allsquaregolf.com/pictures/pictures/000/166/787/large/logo_brand_gfore.jpg">
+			</div>
+		</div>
+
+		<div id="callaway" class="gfore">
+			<div class="gfore_relative">
+				<img id="callaway_logo" width="30%" style="position: absolute; left: 35%; top: 30%; opacity: 0; transition: all ease-in-out 1s" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Callaway_Golf_Company_logo.svg/2560px-Callaway_Golf_Company_logo.svg.png">
+			</div>
+		</div>
 
 	</body>
 
