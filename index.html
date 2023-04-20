@@ -98,7 +98,6 @@
 			div.sheet_holder{
 				position: absolute;
 				width: 95%;
-				height: 79%;
 				top: 20%;
 				left: 2.5%;
 				border-radius: 4px;
@@ -106,7 +105,6 @@
 
 			table.sheet{
 				width: 97%;
-				height: 100%;
 				text-align: left;
 				position: absolute;
 				border-radius: 4px;
@@ -118,6 +116,13 @@
 				border-collapse: collapse;
 				background: #f3f2f1;
 				box-shadow: rgba(255, 255, 255, 0.5) 4px -2px 1px 2px;
+			}
+
+			tbody{
+				height: 700px;
+				width: 100%;
+				display: block;
+    			overflow: auto;
 			}
 
 			table.weather1{
@@ -300,8 +305,9 @@
 				text-align: left;
 				font-weight: 500;
 				font-size: 20;
-				width: 15.5%;
+				width: 13%;
 				background: #ffffffcc;
+				height: 45px;
 			}
 
 			td.sheet1{
@@ -314,6 +320,7 @@
 				width: 13%;
 				background: #ffffffcc;
 				font-weight: 700;
+				height: 45px;
 			}
 
 			td.sheet2{
@@ -325,8 +332,9 @@
 				border-top-left-radius: 0px;
 				border-bottom-left-radius: 0px;
 				padding-left: 2%;
-				width: 26%;
-				background: #ffffffcc
+				width: 24%;
+				background: #ffffffcc;
+				height: 45px;
 			}
 
 			td.p4{
@@ -336,8 +344,9 @@
 				border-top-right-radius: 0px;
 				border-bottom-right-radius: 0px;
 				font-weight: 500;
-				width: 15.5%;
-				background: #ffffffcc
+				width: 14%;
+				background: #ffffffcc;
+				height: 45px;
 			}
 
 			tr.spacer{
@@ -355,7 +364,7 @@
 			}
 
 			div.clock_holder{
-				position: fixed;
+				position: absolute;
 				top: 9%;
 				left: 4.5%;
 				height: 80px;
@@ -619,244 +628,415 @@
 
 
 		<div class="sheet_holder">
+						<table class="sheet">
+											<tr>
+						        				<td class="sheet1" style="background: #f3f2f1;"><span style="font-size: 22px; font-weight: 700; color:#343434;">Time</span></td>
+										        <td class="sheet2" style="background: #f3f2f1;"><span style="font-size: 22px; font-weight: 700;"> &emsp; &emsp;  Course &emsp; &emsp;</span></td>
+										        <td class="p" style="background: #f3f2f1;"> </td>
+										        <td class="p"  style="text-align: right; background: #f3f2f1;"><span style="font-size: 22px; font-weight: 700;">Players</span> </td>
+										        <td class="p" style="background: #f3f2f1;"> </td>
+												<td class="p4" style="background: #f3f2f1;"></td>
+										    </tr>
+						
 
 
-				<table class="sheet">
-					<tr>
-        				<td class="sheet1" style="background: #f3f2f1;"><span style="font-size: 22px; font-weight: 700; color:#343434;">Time</span></td>
-				        <td class="sheet2" style="background: #f3f2f1;"><span style="font-size: 22px; font-weight: 700;"> &emsp; &emsp;  Course &emsp; &emsp;</span></td>
-				        <td class="p" style="background: #f3f2f1;"> </td>
-				        <td class="p"  style="text-align: right; background: #f3f2f1;"><span style="font-size: 22px; font-weight: 700;">Players</span> </td>
-				        <td class="p" style="background: #f3f2f1;"> </td>
-						<td class="p4" style="background: #f3f2f1;"></td>
-				    </tr>
+						<tr>
+	        				<td class="sheet1">3:45 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> Kraft, Daniel</td>
+					        <td class="p">Kraft, Michael</td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
 
-					<tr>
-        				<td class="sheet1">2:24 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
 
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">2:33 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">2:42 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">2:51 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:00 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:09 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> Kraft, Daniel</td>
-				        <td class="p">Kraft, Michael</td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:18 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:27 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:36 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:45 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">3:54 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">4:03 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
-
-					<tr class="spacer">
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-
-					<tr>
-        				<td class="sheet1">4:12 pm</td>
-				        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
-				        <td class="p">Eisen, Lucas</td>
-				        <td class="p"> </td>
-				        <td class="p"> </td>
-						<td class="p4"> </td>
-				    </tr>
+						
 
 
+						<tr>
+	        				<td class="sheet1">3:54 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:03 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:12 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p">Eisen, Lucas</td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:21 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:30 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:39 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:48 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">4:57 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">5:06 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">5:15 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">5:24 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">5:33 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">5:42 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> Letofsky, Jake</td>
+					        <td class="p">Letofsky, Jonah</td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">5:51 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1">6:00 pm</td>
+					        <td class="sheet2"><span style='color: #00705b; background: #00705b30; padding: 3px;'>&emsp; Thompson &emsp; </span></td>
+					        <td class="p"> Moffs, Andrew</td>
+					        <td class="p">Moffs, Matthew</td>
+					        <td class="p">Moffs-Berkowitz, Rebecca</td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1"> </td>
+					        <td class="sheet2"><span style='color: #ffffff00; background: #ffffff0030; padding: 3px;'> no tee time </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1"> </td>
+					        <td class="sheet2"><span style='color: #ffffff00; background: #ffffff0030; padding: 3px;'> no tee time </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
+
+
+						<tr>
+	        				<td class="sheet1"> </td>
+					        <td class="sheet2"><span style='color: #ffffff00; background: #ffffff0030; padding: 3px;'> no tee time </span></td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+					        <td class="p"> </td>
+							<td class="p4"> </td>
+					    </tr>
+
+						<tr class="spacer">
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+
+						
 
 				</table>
 			</div>
@@ -871,7 +1051,7 @@
 					</table>
 					<table class="weather2">
 						<tr>
-							<td>Scattered Clouds</td>
+							<td>Clear Sky</td>
 						</tr>
 					</table>
 					<table class="weather3">
@@ -897,15 +1077,15 @@
 
 				 	<table class="open2">
 					   <tr>
-						 <td><span style='color:#454545;'>2:24 pm</span></td>
+						 <td><span style='color:#454545;'>3:54 pm</span></td>
 						 <td><span style='color: #00705b; background: #00705b30; padding: 0px;'> &emsp; Thompson &emsp;  </span></td>
 					 	</tr>
 					   <tr>
-						 <td><span style='color:#454545;'>2:33 pm</span></td>
+						 <td><span style='color:#454545;'>4:03 pm</span></td>
 						 <td><span style='color: #00705b; background: #00705b30; padding: 0px;'> &emsp; Thompson &emsp;  </span></td>
 					 	</tr>
 					   <tr>
-						 <td><span style='color:#454545;'>2:42 pm</span></td>
+						 <td><span style='color:#454545;'>4:21 pm</span></td>
 						 <td><span style='color: #00705b; background: #00705b30; padding: 0px;'> &emsp; Thompson &emsp;  </span></td>
 					 	</tr>
 				 	</table>
