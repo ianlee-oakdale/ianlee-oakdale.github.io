@@ -813,7 +813,7 @@
                 left: 2%;
                 position: absolute;
                 height: 83%;
-                top: 60%;
+                top: 70%;
                 box-shadow: none;
             }
 
@@ -887,10 +887,23 @@
                 display: none;
                 position: absolute;
                 background-color: #f5f4f0;
-                width: 90%;
+                width: 100%;
                 height: 100%;
                 top: 5%;
                 left: 0;
+                font-size: 10;
+                z-index: 900;
+            }
+
+            .dropdown-content2 {
+                display: none;
+                position: absolute;
+                background-color: #f5f4f0;
+                width: 100%;
+                height: 100%;
+                top: 5%;
+                left: 0;
+                font-size: 10;
                 z-index: 900;
             }
 
@@ -918,6 +931,43 @@
                     border-radius: 0px;
                     z-index: 8000;
                 }
+
+                .dropdown_title{
+                width: 100%;
+                text-align: center; 
+                font-size: 18;
+                font-family: Mukta;
+                padding: 5px;
+                font-weight: 700;
+                padding-top: 8px;
+            }
+
+            .dropdown_table_holder{
+                width: 100%;
+            }
+
+            table.dropdown_table{
+                width: 95%;
+				text-align: left;
+				position: relative;
+				top: 10%;
+				left: 2%;
+				font-size: 14px;
+				font-family: Mukta;
+				font-weight: 500;
+				color: #454545;
+                border-collapse: collapse;
+                background: #f5f4f0;
+                border: 10px solid #f5f4f0;
+            }
+
+            table.dropdown_table tr {
+                border-bottom: 1px solid #cccccc80;
+            }
+
+            .p{font-weight: 700; color: black;}
+
+            .a{font-weight: 700; font-size: 12px;}
 
 
         }
