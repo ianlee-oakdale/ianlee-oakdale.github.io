@@ -1,0 +1,1359 @@
+<html>
+
+    <head>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Tilt+Neon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&display=swap');
+        </style>
+
+        <style>
+
+            body{
+                margin: 0;
+                background: #f5f4f0;
+            }
+
+            .banner{
+                width: 100%;
+                height: 130px;
+                background: #f5f4f0;
+                position: fixed;
+                box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+                z-index: 1000;
+            }
+
+            .banner_holder{
+                width: 100%;
+                height: 150px;
+                position: relative;
+            }
+
+            .title{
+                width: 45%;
+                font-family: Arsenal;
+                color: #00705B;
+                font-size: 30;
+                position: absolute;
+                left: 27.5%;
+                top: 15%;
+                font-weight: 700;
+                text-align: center;
+            }
+
+            .logo1{
+                width: 5.5%;
+                position: absolute;
+                left: 20%;
+                top: 10%;
+            }
+
+            .logo2{
+                width: 6%;
+                position: absolute;
+                right: 20%;
+                top: 10%;
+            }
+
+            .rules_button{
+                width: 13%;
+                position: absolute;
+                bottom: 15%;
+                left: 30%;
+                text-align: center;
+                border-right-style: solid;
+                border-right-color: #00705B;
+                color: #00705B;
+            }
+
+            .viewtimes_button{
+                width: 13%;
+                position: absolute;
+                bottom: 15%;
+                left: 43%;
+                text-align: center;
+                border-right-style: solid;
+                border-right-color: #00705B;
+                color: #ffffff;
+                background-color: #00705B;
+            }
+
+            .requests_button{
+                width: 13%;
+                position: absolute;
+                bottom: 15%;
+                left: 56%;
+                text-align: center;
+                color: #00705B;
+            }
+
+            .rules_button a{
+                color: inherit;
+                font-family: Mukta;
+                font-size: 22;
+                text-decoration: none;
+            }
+
+            .viewtimes_button a{
+                color: inherit;
+                font-family: Mukta;
+                font-size: 22;
+                text-decoration: none;
+            }
+
+            .requests_button a{
+                color: inherit;
+                font-family: Mukta;
+                font-size: 22;
+                text-decoration: none;
+            }
+
+
+            .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+            .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+            .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+            .dates_holder{
+                width: 70%;
+                left: 15%;
+                position: absolute;
+                height: 78%;
+                top: 20%;
+                z-index: 5;
+            }
+
+            .aval_times{
+                width: 70%;
+                left: 15%;
+                position: absolute;
+                height: 78%;
+                top: 35%;
+                z-index: 5;
+            }
+
+            .date_relative_holder{
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+
+            .date_text{
+                position: absolute;
+                width: 130%;
+                text-align: center;
+                left: -15%;
+                top: 2%;
+                font-family: Mukta; 
+                font-size: 20;
+                font-weight: 700;
+            }
+
+            .vert_spacer2{
+                width: 100%;
+                height: 10%;
+
+            }
+
+            .dropdown{
+                position: relative;
+                width: 100%;
+            }
+
+            .dropbtn{
+                background-color: #00705b;
+                color: white;
+                padding: 2px;
+                font-size: 20px;
+                font-family: Mukta;
+                border-radius: 5px;
+                border: none;
+                cursor: pointer;
+                width: 50%;
+                position: relative;
+                left: 25%;
+                top: 0px; 
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            }
+
+            .vert_spacer{
+                width: 100%;
+                height: 5px;
+            }
+
+            .dropbtn:hover {background-color: #f1f1f1; color: #00705B;}
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f5f4f0;
+                width: 220%;
+                height: 100%;
+                top: -2%;
+                left: 100%;
+                z-index: 5;
+            }
+
+            .show {display:block; z-index: 10;}
+            
+            .dropbtn:active {background-color: #DCBB00;}
+            
+            .dropdown_title{
+                width: 100%;
+                text-align: center; 
+                font-size: 25;
+                font-family: Mukta;
+                padding: 5px;
+                font-weight: 700;
+                padding-top: 8px;
+            }
+
+            .dropdown_table_holder{
+                width: 100%;
+            }
+
+            table.dropdown_table{
+                width: 95%;
+				text-align: left;
+				position: absolute;
+				top: 10%;
+				left: 2%;
+				font-size: 16px;
+				font-family: Mukta;
+				font-weight: 500;
+				color: #454545;
+                border-collapse: collapse;
+                background: #f5f4f0;
+                border: 0px solid #f5f4f0;
+            }
+
+            table.dropdown_table tr {
+                border-bottom: 1px solid #cccccc80;
+            }
+
+            .p{font-weight: 700; color: black;}
+
+            .a{font-weight: 700; font-size: 18px;}
+
+            div.extend_page{
+                width: 100%;
+                height: 1000px;
+            }
+
+            button.close_button{
+                display: none;
+                width: 35%;
+                position: absolute;
+                left: 10%;
+                background: #ed2939;
+             }
+
+            div.reservation_button{
+                display: none;
+                width: 35%;
+                position: absolute;
+                right: 10%;
+                background: #00705b;
+            }
+
+
+ 
+        </style>
+
+                <style>
+
+            @media only screen and (max-width: 1370px){
+
+                
+                body{
+                    margin: 0;
+                    background-color: #f5f4f0;
+                }
+
+                .banner{
+                    width: 100%;
+                    height: 120px;
+                    background: #f5f4f0;
+                    position: fixed;
+                    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+                    z-index: 5000;
+                }
+
+                .banner_holder{
+                    width: 100%;
+                    height: 150px;
+                    position: relative;
+                }
+
+                .title{
+                    width: 80%;
+                    font-family: Arsenal;
+                    color: #00705B;
+                    font-size: 30;
+                    position: absolute;
+                    left: 10%;
+                    top: 19%;
+                    text-align: center;
+                    font-weight: 700;
+                }
+
+                .logo1{
+                    width: 7%;
+                    position: absolute;
+                    left: 5%;
+                    top: 10%;
+                }
+
+                .logo2{
+                    width: 7%;
+                    position: absolute;
+                    right: 5%;
+                    top: 10%;
+                }
+
+                .rules_button{
+                    width: 20%;
+                    position: absolute;
+                    bottom: 20%;
+                    left: 20%;
+                    text-align: center;
+                    border-right-style: solid;
+                    border-right-color: #00705B;
+                    color: #00705b;
+                }
+
+                .viewtimes_button{
+                    width: 20%;
+                    position: absolute;
+                    bottom: 20%;
+                    left: 40%;
+                    text-align: center;
+                    border-right-style: solid;
+                    border-right-color: #00705B;
+                    color: #ffffff;
+                    background-color: #00705b;
+                }
+
+                .requests_button{
+                    width: 20%;
+                    position: absolute;
+                    bottom: 20%;
+                    left: 60%;
+                    text-align: center;
+                    color: #00705B;
+                }
+
+                .rules_button a{
+                    color: inherit;
+                    font-family: Mukta;
+                    font-size: 20;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+                .viewtimes_button a{
+                    color: inherit;
+                    font-family: Mukta;
+                    font-size: 20;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+                .requests_button a{
+                    color: inherit;
+                    font-family: Mukta;
+                    font-size: 20;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+
+                .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+                .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+                .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+                .dates_holder{
+                    width: 98%;
+                    left: 2%;
+                    position: absolute;
+                    height: 83%;
+                    top: 15%;
+                    z-index: 5;
+                    box-shadow: none;
+                }
+
+                .aval_times{
+                    width: 98%;
+                    left: 2%;
+                    position: absolute;
+                    height: 83%;
+                    top: 35%;
+                    z-index: 5;
+                    box-shadow: none;
+                }
+
+                .date_relative_holder{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .date_text{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    top: 2%;
+                    left: 0%;
+                    font-family: Mukta; 
+                    font-size: 18;
+                    font-weight: 700;
+                }
+
+                .vert_spacer2{
+                    width: 100%;
+                    height: 12%;
+
+                }
+
+                .dropdown{
+                    position: relative;
+                    width: 100%;
+                }
+
+                .dropbtn{
+                    background-color: #00705bcc;
+                    color: white;
+                    padding: 2px;
+                    font-size: 18px;
+                    font-family: Mukta;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                    width: 50%;
+                    position: relative;
+                    left: 25%;
+                    top: 0px; 
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    font-weight: 400;
+                }
+
+                .vert_spacer{
+                    width: 100%;
+                    height: 7px;
+                }
+
+                .dropbtn:hover {background-color: #f1f1f1; color: #00705B;}
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f5f4f0;
+                    width: 100%;
+                    height: 110%;
+                    top: 0%;
+                    left: 0;
+                    z-index: 5;
+                }
+
+                .show {display:block; z-index: 10;}
+                
+                .dropbtn:active {background-color: #DCBB00;}
+                
+                .dropdown_title{
+                    width: 90%;
+                    text-align: center; 
+                    font-size: 25;
+                    font-family: Mukta;
+                    font-weight: 700;
+                    left: 5%;
+                    background: #f5f4f0;
+                    position: absolute;
+                    top: 0px;
+                }
+
+                .dropdown_table_holder{
+                    width: 100%;
+                }
+
+                table.dropdown_table{
+                    width: 95%;
+                    text-align: left;
+                    position: absolute;
+                    top: 17%;
+                    left: 2%;
+                    font-size: 15px;
+                    font-family: Mukta;
+                    font-weight: 500;
+                    color: #454545;
+                    border-collapse: collapse;
+                    background: #f5f4f0;
+                    border: 2px solid #f5f4f0;
+                    box-shadow: none;
+                }
+
+                table.dropdown_table tr {
+                    border-bottom: 1px solid #cccccc80;
+                    height: 50px;
+                }
+
+                td.a{min-width: 60px}
+
+                td.p{min-width: 120px;}
+
+                .p{font-weight: 700; color: black;}
+
+                .a{font-weight: 700; font-size: 16px;}
+
+                .n{padding-left: 20px;}
+
+                div.extend_page{
+                    width: 100%;
+                    height: 800px;
+                }
+
+                button.close_button{
+                    width: 35%;
+                    position: absolute;
+                    left: 10%;
+                    top: 10%;
+                    background: #ed2939;
+                    display: block;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 15;
+                    color: #f5f4f0;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                div.reservation_button{
+                    width: 35%;
+                    position: absolute;
+                    right: 10%;
+                    top: 10%;
+                    background: #00705b;
+                    display:block;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 15;
+                    color: #f5f4f0;
+                    border-radius: 5px;
+                }
+
+                .reservation_button a{
+                    text-decoration: none;
+                    color: #f5f4f0;
+                }
+
+            }
+
+
+    </style>
+
+
+        <style>
+
+            @media only screen and (max-width: 800px){
+
+                
+                body{
+                    margin: 0;
+                    background-color: #f5f4f0;
+                }
+
+                .banner{
+                    width: 100%;
+                    height: 90px;
+                    background: #f5f4f0;
+                    position: fixed;
+                    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+                    z-index: 100;
+                }
+
+                .banner_holder{
+                    width: 100%;
+                    height: 150px;
+                    position: relative;
+                }
+
+                .title{
+                    width: 80%;
+                    font-family: Arsenal;
+                    color: #00705B;
+                    font-size: 15;
+                    position: absolute;
+                    left: 10%;
+                    top: 19%;
+                    text-align: center;
+                    font-weight: 700;
+                }
+
+                .logo1{
+                    width: 8%;
+                    position: absolute;
+                    left: 2%;
+                    top: 10%;
+                }
+
+                .logo2{
+                    width: 8%;
+                    position: absolute;
+                    right: 2%;
+                    top: 10%;
+                }
+
+                .rules_button{
+                    width: 30%;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 5%;
+                    text-align: center;
+                    border-right-style: solid;
+                    border-right-color: #00705B;
+                    color: #00705b;
+                }
+
+                .viewtimes_button{
+                    width: 30%;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 35%;
+                    text-align: center;
+                    border-right-style: solid;
+                    border-right-color: #00705B;
+                    color: #ffffff;
+                    background-color: #00705b;
+                }
+
+                .requests_button{
+                    width: 30%;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 65%;
+                    text-align: center;
+                    color: #00705B;
+                }
+
+                .rules_button a{
+                    color: inherit;
+                    font-family: Mukta;
+                    font-size: 13;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+                .viewtimes_button a{
+                    color: inherit;
+                    font-family: Mukta;
+                    font-size: 13;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+                .requests_button a{
+                    color: inherit;
+                    font-family: Mukta;
+                    font-size: 13;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+
+
+                .rules_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+                .viewtimes_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+                .requests_button:hover {background:#DCBB00;  color:#f5f4f0;}
+
+                .dates_holder{
+                    width: 98%;
+                    left: 2%;
+                    position: absolute;
+                    height: 83%;
+                    top: 15%;
+                    z-index: 5;
+                    box-shadow: none;
+                }
+
+                .aval_times{
+                    width: 98%;
+                    left: 2%;
+                    position: absolute;
+                    height: 83%;
+                    top: 40%;
+                    z-index: 5;
+                    box-shadow: none;
+                }
+
+                .date_relative_holder{
+                    position: relative;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .date_text{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 20px;
+                    left: 0%;
+                    font-family: Mukta; 
+                    font-size: 16;
+                    font-weight: 700;
+                }
+
+                .vert_spacer2{
+                    width: 100%;
+                    height: 12%;
+
+                }
+
+                .dropdown{
+                    position: relative;
+                    width: 100%;
+                }
+
+                .dropbtn{
+                    background-color: #00705bcc;
+                    color: white;
+                    padding: 2px;
+                    font-size: 16px;
+                    font-family: Mukta;
+                    border-radius: 5px;
+                    border: none;
+                    cursor: pointer;
+                    width: 70%;
+                    position: relative;
+                    left: 15%;
+                    top: 0px; 
+                    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                    font-weight: 400;
+                }
+
+                .vert_spacer{
+                    width: 100%;
+                    height: 7px;
+                }
+
+                .dropbtn:hover {background-color: #f1f1f1; color: #00705B;}
+
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    background-color: #f5f4f0;
+                    width: 100%;
+                    height: 100%;
+                    top: 0%;
+                    left: 0;
+                    z-index: 5;
+                }
+
+                .show {display:block; z-index: 10;}
+                
+                .dropbtn:active {background-color: #DCBB00;}
+                
+                .dropdown_title{
+                    width: 90%;
+                    text-align: center; 
+                    font-size: 25;
+                    font-family: Mukta;
+                    font-weight: 700;
+                    left: 5%;
+                    background: #f5f4f0;
+                    position: absolute;
+                    top: -20px;
+                }
+
+                .dropdown_table_holder{
+                    width: 100%;
+                }
+
+                table.dropdown_table{
+                    width: 95%;
+                    text-align: left;
+                    position: absolute;
+                    top: 17%;
+                    left: 2%;
+                    font-size: 12px;
+                    font-family: Mukta;
+                    font-weight: 500;
+                    color: #454545;
+                    border-collapse: collapse;
+                    background: #f5f4f0;
+                    border: 2px solid #f5f4f0;
+                    box-shadow: none;
+                }
+
+                table.dropdown_table tr {
+                    border-bottom: 1px solid #cccccc80;
+                    height: 50px;
+                }
+
+                td.a{min-width: 60px}
+
+                td.p{min-width: 120px;}
+
+                .p{font-weight: 700; color: black;}
+
+                .a{font-weight: 700; font-size: 13px;}
+
+                .n{padding-left: 20px;}
+
+                div.extend_page{
+                    width: 100%;
+                    height: 800px;
+                }
+
+                button.close_button{
+                    width: 35%;
+                    position: absolute;
+                    left: 10%;
+                    top: 10%;
+                    background: #ed2939;
+                    display: block;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 15;
+                    color: #f5f4f0;
+                    border: none;
+                    border-radius: 5px;
+                }
+
+                div.reservation_button{
+                    width: 35%;
+                    position: absolute;
+                    right: 10%;
+                    top: 10%;
+                    background: #00705b;
+                    display:block;
+                    text-align: center;
+                    padding: 5px;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 15;
+                    color: #f5f4f0;
+                    border-radius: 5px;
+                }
+
+                .reservation_button a{
+                    text-decoration: none;
+                    color: #f5f4f0;
+                }
+
+            }
+
+
+    </style>
+
+
+    </head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FEE2TXEBLD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FEE2TXEBLD');
+</script>
+
+
+    <body>
+
+        <div class="banner">
+            <div class="banner_holder">
+                <div class="title">
+                    Available Reciprocal Tee Times For Oakdale Members
+                </div>
+                <div class="logo1">
+                    <img width="100%" src="https://oakdalegolf.com/wp-content/uploads/2021/08/oakdale-color.png">
+                </div>
+                <div class="logo2">
+                    <img width="100%" src="https://i.imgur.com/PsQXYFA.png">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dates_holder">
+            <div class="dates_relative_holder">
+                <div class="date_text">
+                    Please Note: These Tee Times will be booked on a first come first served basis. Please email aarychuk@oakdalegolf.com to reserve a Tee Time. 
+                    <br><br>
+                    *This website will be updated daily. Tee Times shown here may not be available if they were already booked today.
+                </div> 
+            </div>
+        </div>
+
+
+
+<!--- Insert Code from HTML input text file here --->
+
+        <div class="aval_times">
+
+            <div class="dropdown_table_holder">
+                <table class="dropdown_table">
+
+                    
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 29 <strong></a></td>
+                        <td class="a"><div class="a">10:00 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 29 <strong></a></td>
+                        <td class="a"><div class="a">11:00 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 29 <strong></a></td>
+                        <td class="a"><div class="a">11:00 AM</a></td>
+                        <td class="p"><div class="p">Oslerbrook Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 29 <strong></a></td>
+                        <td class="a"><div class="a">12:10 PM</a></td>
+                        <td class="p"><div class="p">Deer Ridge Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($20)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 29 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 29 <strong></a></td>
+                        <td class="a"><div class="a">3:00 PM</a></td>
+                        <td class="p"><div class="p">St. Andrew's East Golf Club</p></td>
+                        <td><div class="n">$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 30 <strong></a></td>
+                        <td class="a"><div class="a">09:00 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 30 <strong></a></td>
+                        <td class="a"><div class="a">10:30 AM</a></td>
+                        <td class="p"><div class="p">Deer Ridge Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($20)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 30 <strong></a></td>
+                        <td class="a"><div class="a">11:06 AM</a></td>
+                        <td class="p"><div class="p">Galt Country Club</p></td>
+                        <td><div class="n">$23 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 30 <strong></a></td>
+                        <td class="a"><div class="a">12:00 PM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 30 <strong></a></td>
+                        <td class="a"><div class="a">1:00 PM</a></td>
+                        <td class="p"><div class="p">Brantford Golf Club</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 30 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Oslerbrook Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 31 <strong></a></td>
+                        <td class="a"><div class="a">10:00 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>May 31 <strong></a></td>
+                        <td class="a"><div class="a">10:10 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 01 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 01 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 02 <strong></a></td>
+                        <td class="a"><div class="a">10:30 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 03 <strong></a></td>
+                        <td class="a"><div class="a">10:30 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 03 <strong></a></td>
+                        <td class="a"><div class="a">2:00 PM</a></td>
+                        <td class="p"><div class="p">Brantford Golf Club</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 03 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Barrie Country Club</p></td>
+                        <td><div class="n">
+$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 03 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Cherry Hill Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 03 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 03 <strong></a></td>
+                        <td class="a"><div class="a">3:00 PM</a></td>
+                        <td class="p"><div class="p">St. Andrew's East Golf Club</p></td>
+                        <td><div class="n">$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 04 <strong></a></td>
+                        <td class="a"><div class="a">10:30 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 04 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Barrie Country Club</p></td>
+                        <td><div class="n">
+$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 04 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Barrie Country Club</p></td>
+                        <td><div class="n">
+$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 05 <strong></a></td>
+                        <td class="a"><div class="a">10:30 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 05 <strong></a></td>
+                        <td class="a"><div class="a">2:00 PM</a></td>
+                        <td class="p"><div class="p">Deer Ridge Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($20)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 05 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">08:30 AM</a></td>
+                        <td class="p"><div class="p">Cherry Hill Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">09:00 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">11:00 AM</a></td>
+                        <td class="p"><div class="p">Deer Ridge Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($20)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">11:06 AM</a></td>
+                        <td class="p"><div class="p">Galt Country Club</p></td>
+                        <td><div class="n">$23 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">1:33 PM</a></td>
+                        <td class="p"><div class="p">Burlington Golf and Country Club</p></td>
+                        <td><div class="n">$22.50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">1:40 PM</a></td>
+                        <td class="p"><div class="p">Cedar Brae Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">2:10 PM</a></td>
+                        <td class="p"><div class="p">Briars Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($22)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 06 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 07 <strong></a></td>
+                        <td class="a"><div class="a">08:30 AM</a></td>
+                        <td class="p"><div class="p">Cherry Hill Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 08 <strong></a></td>
+                        <td class="a"><div class="a">11:30 AM</a></td>
+                        <td class="p"><div class="p">Deer Ridge Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($20)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 08 <strong></a></td>
+                        <td class="a"><div class="a">12:00 PM</a></td>
+                        <td class="p"><div class="p">Whitevale Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 08 <strong></a></td>
+                        <td class="a"><div class="a">1:00 PM</a></td>
+                        <td class="p"><div class="p">Brampton Golf Club</p></td>
+                        <td><div class="n">$22 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 08 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 08 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Maple Downs (14 Holes)</p></td>
+                        <td><div class="n">Carts Optional (Fees Apply)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 09 <strong></a></td>
+                        <td class="a"><div class="a">10:30 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 09 <strong></a></td>
+                        <td class="a"><div class="a">1:40 PM</a></td>
+                        <td class="p"><div class="p">Briars Golf Club</p></td>
+                        <td><div class="n">Carts Optional ($22)</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 10 <strong></a></td>
+                        <td class="a"><div class="a">09:10 AM</a></td>
+                        <td class="p"><div class="p">St Andrews Valley</p></td>
+                        <td><div class="n">Mandatory Carts Included</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 10 <strong></a></td>
+                        <td class="a"><div class="a">11:30 AM</a></td>
+                        <td class="p"><div class="p">Bay Of Quinte Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 10 <strong></a></td>
+                        <td class="a"><div class="a">11:40 AM</a></td>
+                        <td class="p"><div class="p">Oslerbrook Golf Club</p></td>
+                        <td><div class="n">$25 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 10 <strong></a></td>
+                        <td class="a"><div class="a">2:30 PM</a></td>
+                        <td class="p"><div class="p">Barrie Country Club</p></td>
+                        <td><div class="n">
+$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 10 <strong></a></td>
+                        <td class="a"><div class="a">2:40 PM</a></td>
+                        <td class="p"><div class="p">Barrie Country Club</p></td>
+                        <td><div class="n">
+$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 10 <strong></a></td>
+                        <td class="a"><div class="a">3:21 PM</a></td>
+                        <td class="p"><div class="p">The Thornhill Club</p></td>
+                        <td><div class="n">Lottery Times - confirmed Thursday prior</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 11 <strong></a></td>
+                        <td class="a"><div class="a">1:50 PM</a></td>
+                        <td class="p"><div class="p">Westmount Golf and Country Club</p></td>
+                        <td><div class="n">$21 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    <tr>
+                        <td class="a"><div class="a"><strong>June 11 <strong></a></td>
+                        <td class="a"><div class="a">2:00 PM</a></td>
+                        <td class="p"><div class="p">St. Andrew's East Golf Club</p></td>
+                        <td><div class="n">$50 Mandatory Cart Fee</n></td>
+                    </tr>
+
+        
+                    
+
+                </table>
+            </div>
+        </div>
+
+        </div>
+
+
+    
+<!--- End inserting the code here --->                    
+
+            </div>
+        </div>
+
+    <div class="extend_page">
+
+    </div>
+
+    </body>
+
+
+</html>
