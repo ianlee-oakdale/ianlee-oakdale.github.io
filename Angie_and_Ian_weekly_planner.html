@@ -103,11 +103,12 @@
                 padding: 5px;
                 width: 60%;
                 font-family: Arsenal;
-                font-size: 20px;
+                font-size: 25px;
                 font-weight: 700;
                 color: #00705b;
                 position: absolute;
                 left: 2%;
+                top: 5px;
             }
 
             .showdate{
@@ -122,11 +123,11 @@
                 color: #5a5a5a;
                 position: absolute;
                 left: 2%;
-                top: 8%;
+                top: 50px;
             }
 
             .picture1{
-                width: 25%;
+                width: 30%;
                 background: #ffffff;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
                 border-radius: 2px;
@@ -134,9 +135,27 @@
                 padding: 0.5px;
                 position: absolute;
                 right: 2%;
+                top: 5px;
                 text-align: center;
             }
 
+            .ian_weather{
+                position: absolute;
+                top: 280px;
+                width: 95%;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .angie_weather{
+                position: absolute;
+                top: 160px;
+                width: 95%;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
 
         </style>
 
@@ -155,6 +174,20 @@
 
         <div class="picture1">
             <img width="100%" src="https://i.imgur.com/kFv4Xtk.jpg">
+        </div>
+
+        <div class="ian_weather">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/43d59n79d64/mississauga/" data-label_1="MISSISSAUGA" data-label_2="Weather" data-font="Roboto" data-icons="Climacons Animated" data-days="3" data-theme="pure" >MISSISSAUGA Weather</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+        </div>
+
+        <div class="angie_weather">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/45d48n75d70/gatineau/" data-label_1="GATINEAU" data-label_2="Weather" data-font="Roboto" data-icons="Climacons Animated" data-days="3" data-theme="pure" >GATINEAU Weather</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
         </div>
     </body>
 
