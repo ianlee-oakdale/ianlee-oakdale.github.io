@@ -1,0 +1,163 @@
+<html>
+
+    <head>
+
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Tilt+Neon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&display=swap');
+        </style>
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+        </script>
+
+        <script>
+                window.addEventListener("load", () => {
+            clock();
+            function clock() {
+            const today = new Date();
+
+            // get time components
+            const hours = today.getHours();
+            const minutes = today.getMinutes();
+            const seconds = today.getSeconds();
+
+            //add '0' to hour, minute & second when they are less 10
+            const hour = hours < 10 ? "0" + hours : hours;
+            const minute = minutes < 10 ? "0" + minutes : minutes;
+            const second = seconds < 10 ? "0" + seconds : seconds;
+
+            //make clock a 12-hour time clock
+            const hourTime = hour > 12 ? hour - 12 : hour;
+
+            // if (hour === 0) {
+            //   hour = 12;
+            // }
+            //assigning 'am' or 'pm' to indicate time of the day
+            const ampm = hour < 12 ? "AM" : "PM";
+
+
+            const time = hourTime + ":" + minute + " " + ampm;
+
+
+
+            //print current date and time to the DOM
+            document.getElementById("date-time").innerHTML = time;
+            setTimeout(clock, 1000);
+            }
+                });
+                </script>
+                <script>
+                window.addEventListener("load", () => {
+            daydate();
+            function daydate() {
+            const today = new Date();
+
+
+            // get date components
+            const month = today.getMonth();
+            const weekday = today.getDay();
+            const day = today.getDate();
+
+            //declaring a list of all months in  a year
+            const monthList = [
+            "January",
+            "February",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "August",
+            "September",
+            "October",
+            "November",
+            "December"
+            ];
+
+                const daysofweek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+            //get current date and time
+            const dateofmonth = daysofweek[weekday]+", "+monthList[month]+" "+day;
+
+
+            //print current date and time to the DOM
+            document.getElementById("calendar").innerHTML = dateofmonth;
+            }
+                });
+        </script>
+
+        <style>
+            body{
+                background: #f5f5f5;
+            }
+
+            .title{
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+                text-align: center;
+                padding: 5px;
+                width: 70%;
+                font-family: Arsenal;
+                font-size: 20px;
+                font-weight: 700;
+                color: #00705b;
+                position: absolute;
+                left: 2%;
+            }
+
+            .showdate{
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+                text-align: center;
+                padding: 0.5px;
+                width: 45%;
+                font-family: Arsenal;
+                font-size: 12px;
+                color: #5a5a5a;
+                position: absolute;
+                left: 2%;
+                top: 8%;
+            }
+
+            .picture1{
+                width: 20%;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+                text-align: center;
+                padding: 0.5px;
+                position: absolute;
+                right: 2%;
+                text-align: center;
+            }
+
+
+        </style>
+
+
+
+    </head>
+
+    <body>
+        <div class="title">
+            Angie and Ians Week
+        </div>
+
+        <div id="daydate" class="showdate">
+            <nobr><h1 id="calendar"></h1></nobr>
+        </div>
+
+        <div class="picture1">
+            <img width="100%" src="https://i.imgur.com/kFv4Xtk.jpg">
+        </div>
+    </body>
+
+
+
+</html>
