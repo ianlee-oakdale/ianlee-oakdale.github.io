@@ -93,6 +93,7 @@
                 });
         </script>
 
+
         <style>
             body{
                 background: #5a5a5a;
@@ -104,7 +105,7 @@
                 border-radius: 2px;
                 text-align: center;
                 padding: 5px;
-                width: 92%;
+                width: 91%;
                 font-family: Lato;
                 font-size: 22px;
                 font-weight: 500;
@@ -226,6 +227,109 @@
                 font-family: Orbitron;
             }
 
+            .todays_schedule{
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+                text-align: center;
+                padding: 5px;
+                width: 91%;
+                font-weight: 500;
+                position: absolute;
+                left: 2.5%;
+                top: 105px;
+                height: 85px;
+                color: #5a5a5a;
+            }
+
+            .today{
+                position: absolute;
+                left: 5%;
+                top: 5%;
+                font-family: Roboto;
+                font-size: 14;
+                color: #000000;
+            }
+
+            .monday{
+                position: absolute;
+                left: 2.5%;
+                top: 400;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .tuesday{
+                position: absolute;
+                left: 2.5%;
+                top: 450;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .wednesday{
+                position: absolute;
+                left: 2.5%;
+                top: 500;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .thursday{
+                position: absolute;
+                left: 2.5%;
+                top: 550;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .friday{
+                position: absolute;
+                left: 2.5%;
+                top: 600;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .saturday{
+                position: absolute;
+                left: 2.5%;
+                top: 650;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+            .sunday{
+                position: absolute;
+                left: 2.5%;
+                top: 700;
+                width: 93%;
+                height: 42px;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+            }
+
+
+
         </style>
 
 
@@ -238,7 +342,7 @@
         </div>
 
         <div id="daydate" class="showdate">
-            <h1 id="calendar" style="font-size: 13px;"></h1>
+            <h1 id="calendar" style="font-size: 12px;"></h1>
         </div>
 
 
@@ -268,6 +372,82 @@
                 Angie &emsp;
                 0
             </div>
+        </div>
+
+
+        <div class="todays_schedule">
+
+            <div id="0" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+            <div id="1" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+            <div id="2" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+            <div id="3" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+            <div id="4" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+            <div id="5" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+            <div id="6" style="display:none">
+                <div class="today">Today for Ian and Angie</div>
+            </div>
+
+        </div>
+        <script>
+            function showhide() {
+              var d = new Date();
+              var s = document.getElementById(+d.getDay());
+              s.style.display = (s.style.display == 'block') ? 'none' : 'block';
+            }
+            showhide();
+        </script>
+
+        
+        <div class="monday">
+
+        </div>
+
+
+        <div class="tuesday">
+
+        </div>
+
+
+        <div class="wednesday">
+
+        </div>
+
+
+        <div class="thursday">
+
+        </div>
+
+
+        <div class="friday">
+
+        </div>
+
+
+        <div class="saturday">
+
+        </div>
+
+
+        <div class="sunday">
+
         </div>
 
 
