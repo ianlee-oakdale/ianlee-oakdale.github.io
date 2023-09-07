@@ -11,6 +11,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lato&family=Mukta:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Mukta:wght@300;400;500;600&family=Orbitron:wght@500&family=Roboto:wght@500&display=swap');
         </style>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
@@ -119,7 +120,7 @@
                 border-radius: 2px;
                 text-align: center;
                 padding: 5px;
-                width: 45%;
+                width: 43%;
                 font-family: Arsenal;
                 font-size: 10px;
                 color: #5a5a5a;
@@ -182,7 +183,48 @@
                 font-weight: 500;
             }
 
+            .scoreboard{
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+                text-align: center;
+                padding: 5px;
+                width: 43%;
+                font-family: Arsenal;
+                font-size: 10px;
+                color: #5a5a5a;
+                position: absolute;
+                left: 50%;
+                top: 50px;
+                height: 33px;
+            }
 
+            .backgammon{
+                width: 100%;
+                text-align: center;
+                padding-bottom: 3px;
+                font-weight: 600;;
+            }
+
+            .ian_score{
+                width: 45%;
+                padding: 3px;
+                background: #a40000;
+                position: absolute;
+                left: 1%;
+                color: #ffffff;
+                font-family: Orbitron;
+            }
+
+            .angie_score{
+                width: 45%;
+                padding: 3px;
+                background: #2e5984;
+                position: absolute;
+                right: 1%;
+                color: #ffffff;
+                font-family: Orbitron;
+            }
 
         </style>
 
@@ -196,7 +238,7 @@
         </div>
 
         <div id="daydate" class="showdate">
-            <h1 id="calendar" style="font-size: 12px;"></h1>
+            <h1 id="calendar" style="font-size: 13px;"></h1>
         </div>
 
 
@@ -214,6 +256,18 @@
 
         <div class="weekly_message">
             Weekly Message <img width="30%" style="padding-top: 2px;" src="https://cdn.icon-icons.com/icons2/3422/PNG/512/note_write_notebook_notes_paper_file_icon_218608.png">
+        </div>
+
+        <div class="scoreboard">
+            <div class="backgammon">Backgammon Score</div>
+            <div class="ian_score">
+                Ian &emsp;
+                0
+            </div>
+            <div class="angie_score">
+                Angie &emsp;
+                0
+            </div>
         </div>
 
 
