@@ -9,6 +9,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Tilt+Neon&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Lato&family=Mukta:wght@300;400;500;600&family=Roboto:wght@500&display=swap');
         </style>
 
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
@@ -92,7 +94,7 @@
 
         <style>
             body{
-                background: #ff6c70;
+                background: #5a5a5a;
             }
 
             .title{
@@ -101,10 +103,10 @@
                 border-radius: 2px;
                 text-align: center;
                 padding: 5px;
-                width: 60%;
-                font-family: Arsenal;
-                font-size: 20px;
-                font-weight: 700;
+                width: 92%;
+                font-family: Lato;
+                font-size: 22px;
+                font-weight: 500;
                 color: #00705b;
                 position: absolute;
                 left: 2.5%;
@@ -117,33 +119,20 @@
                 border-radius: 2px;
                 text-align: center;
                 padding: 5px;
-                width: 60%;
+                width: 45%;
                 font-family: Arsenal;
-                font-size: 12px;
+                font-size: 10px;
                 color: #5a5a5a;
                 position: absolute;
                 left: 2.5%;
                 top: 50px;
             }
 
-            .picture1{
-                width: 30%;
-                background: #ffffff;
-                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-                border-radius: 2px;
-                text-align: center;
-                padding: 0.5px;
-                position: absolute;
-                right: 2%;
-                top: 5px;
-                text-align: center;
-            }
-
             .ian_weather{
                 position: absolute;
-                top: 120px;
+                top: 220px;
                 width: 20%;
-                right: 30%;
+                left: 42%;
                 background: #ffffff;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
                 border-radius: 2px;
@@ -152,29 +141,48 @@
 
             .angie_weather{
                 position: absolute;
-                top: 120px;
+                top: 220px;
                 width: 15%;
                 height: 30px;
-                right: 2.5%;
+                left: 70%;
                 background: #ffffff;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
                 border-radius: 2px;
                 z-index: 1000;
             }
 
-            .planner{
+
+            .weekly_photos{
                 position: absolute;
-                top: 330px;
-                width: 93%;
+                top: 220px;
                 left: 2.5%;
                 background: #ffffff;
                 box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-                font-family: Mukta;
+                border-radius: 2px;
+                width: 30%;
+                padding: 10px;
+                text-align: center;
                 font-size: 13;
-                border-radius: 5px;
-                padding: 5px;
-                z-index: 100;
+                font-family: Roboto;
+                font-weight: 500;
             }
+
+            .weekly_message{
+                position: absolute;
+                top: 295px;
+                left: 2.5%;
+                background: #ffffff;
+                box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+                border-radius: 2px;
+                width: 30%;
+                padding: 10px;
+                text-align: center;
+                font-size: 13;
+                font-family: Roboto;
+                font-weight: 500;
+            }
+
+
 
         </style>
 
@@ -188,11 +196,7 @@
         </div>
 
         <div id="daydate" class="showdate">
-            <h1 id="calendar" style="font-size: 15px;"></h1>
-        </div>
-
-        <div class="picture1">
-            <img width="100%" src="https://i.imgur.com/kFv4Xtk.jpg">
+            <h1 id="calendar" style="font-size: 12px;"></h1>
         </div>
 
 
@@ -204,64 +208,15 @@
             <div id="ww_e8813777c0efa" v='1.3' loc='id' a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl4742"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","el_wfc":3}'>Weather for the Following Location: <a href="https://2ua.org/de/can/gatineau/karte/" id="ww_e8813777c0efa_u" target="_blank">Gatineau auf der Karte, Kanada</a></div><script async src="https://app2.weatherwidget.org/js/?id=ww_e8813777c0efa"></script>
         </div>
 
-
-        <div class="planner">
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00008b">Angies Goals:</span>
-            <br> - Go to bed early every night (before 12)
-            <br> - Don't spend any money of fast food
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00008b">Ians Goals:</span>
-            <br> - Eat fruit every day
-            <br> - Fix the espresso machine
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Monday</span>
-            <br> &emsp; Angie Go Golfing!
-            <br> &emsp; Ian work 5-12
-            <br> &emsp; Ian 3pm Golf at Grey Silo
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Tuesday</span>
-            <br> &emsp; Angie 10-2 Orientaion
-            <br> &emsp; Angie 4-6 Rugby Practice
-            <br> &emsp; Ian 6-2 Work
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Wednesday</span>
-            <br> &emsp; Ian 6-3 Work
-            <br> &emsp; Angie 4:30-6:30 Math class
-            <br> &emsp; Angie 4-6 Rugby Practice
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Thusday</span>
-            <br> &emsp; Angie 10-12 Chemistry Class
-            <br> &emsp; Ian 1-9 Work
-            <br> &emsp; Angie 1-3 English
-            <br> &emsp; Angie 4-6 Rugby Practice
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Friday</span>
-            <br> &emsp; Angie 11-2 Physcology Class
-            <br> &emsp; Ian 1-9 Work
-            <br> &emsp; Angie 4-5 Math Class
-            <br> &emsp; Angie 4-6 Rugby Practice
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Saturday</span>
-            <br> &emsp; Ian Practice Golf and work on himself
-            <br> &emsp; 
-            <br><br>
-
-            <span style="font-family: Arsenal; font-weight: 600; font-size: 15; color: #00705b">Sunday</span>
-            <br> &emsp; Ian Practice golf and work on himself
-            <br> &emsp; 
-            <br><br>
-
-            
-
-
+        <div class="weekly_photos">
+            Weekly Photos <img width="30%"  style="padding-top: 10px;" src="https://logos-world.net/wp-content/uploads/2022/05/Google-Photos-Logo.png">
         </div>
+
+        <div class="weekly_message">
+            Weekly Message <img width="30%" style="padding-top: 2px;" src="https://cdn.icon-icons.com/icons2/3422/PNG/512/note_write_notebook_notes_paper_file_icon_218608.png">
+        </div>
+
+
     </body>
 
 
