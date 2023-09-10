@@ -31,6 +31,14 @@
         </script>
 
         <script>
+            function myFunction3() {
+                document.getElementById("myDropdown2").classList.remove("show");
+                document.getElementById("myDropdown1").classList.remove("show");
+            }
+        </script>
+
+
+        <script>
                 window.addEventListener("load", () => {
             clock();
             function clock() {
@@ -109,7 +117,7 @@
 
         <style>
             body{
-                background: #FFFFFF;
+                background: #ffffffda;
             }
 
             .title{
@@ -144,7 +152,7 @@
 
             .ian_weather{
                 position: absolute;
-                top: 170px;
+                top: 200px;
                 width: 20%;
                 left: 42%;
                 background: #ffffff;
@@ -154,7 +162,7 @@
 
             .angie_weather{
                 position: absolute;
-                top: 170px;
+                top: 200px;
                 width: 15%;
                 height: 30px;
                 left: 70%;
@@ -166,7 +174,7 @@
 
             .weekly_photos{
                 position: absolute;
-                top: 170px;
+                top: 195px;
                 left: 5%;
                 background: #ffffff;
                 border-radius: 2px;
@@ -207,7 +215,7 @@
 
             .weekly_message{
                 position: absolute;
-                top: 247px;
+                top: 272px;
                 left: 5%;
                 background: #ffffff;
                 border-radius: 2px;
@@ -277,7 +285,7 @@
                 position: absolute;
                 left: 2.5%;
                 top: 50px;
-                height: 95px;
+                height: 125px;
                 color: #5a5a5a;
             }
 
@@ -370,12 +378,20 @@
                 font-weight: 500;
                 position: absolute;
                 left: 2.5%;
-                top: 340px;
+                top: 370px;
                 height: 95px;
                 font-family: Roboto;
                 z-index: 1200;
                 font-size: 12;
             }
+
+            button.close_button{
+                display: none;
+                width: 35%;
+                position: absolute;
+                left: 10%;
+                background: #ed2939;
+             }
 
 
 
@@ -388,7 +404,7 @@
     <body>
 
         <div id="daydate" class="showdate">
-            <h1 id="calendar" style="font-size: 12px;"></h1>
+            <h1 id="calendar" style="font-size: 14px;"></h1>
         </div>
 
 
@@ -408,6 +424,8 @@
 
 
         <div id="myDropdown1" class="weekly_photos_popup">
+            <button onclick="myFunction3()" class="'close_button">Close</button>
+            <br><br>
             insert weekly photos here
         </div>
 
@@ -418,6 +436,8 @@
         </div>
 
         <div id="myDropdown2" class="weekly_message_popup">
+            <button onclick="myFunction3()" class="'close_button">Close</button>
+            <br><br>
             insert weekly message here
         </div>
 
