@@ -1,0 +1,1436 @@
+<html>
+
+    <head>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap');
+    </style>
+
+
+<!-- Display Fields Scripts -->
+    <script>
+        function open_menu() {
+            document.getElementById("pop_up_cover").classList.toggle("hide");
+            document.getElementById("pop_up").classList.toggle("hide");
+        }
+
+        function hide_popups() {
+            document.getElementById("pop_up_cover").classList.toggle("hide");
+            document.getElementById("pop_up").classList.toggle("hide");
+        }
+
+        function clear_all_fields() {
+            document.getElementById("broker_tables").classList.remove("show");
+            document.getElementById("broker_click").classList.remove("clicked");
+            document.getElementById("broker_secondary").classList.remove("sec_clicked");
+            document.getElementById("broker_arrow").classList.remove("arrow_clicked");
+            document.getElementById("broker_id").classList.remove("related");
+            document.getElementById("related_arrow_one").classList.remove("show");
+            document.getElementById("lawyer_tables").classList.remove("show");
+            document.getElementById("lawyer_click").classList.remove("clicked");
+            document.getElementById("lawyer_secondary").classList.remove("sec_clicked");
+            document.getElementById("lawyer_arrow").classList.remove("arrow_clicked");
+            document.getElementById("lawyer_id").classList.remove("related");
+            document.getElementById("related_arrow_one").classList.remove("show");
+            document.getElementById("title_tables").classList.remove("show");
+            document.getElementById("title_click").classList.remove("clicked");
+            document.getElementById("title_secondary").classList.remove("sec_clicked");
+            document.getElementById("title_arrow").classList.remove("arrow_clicked");
+            document.getElementById("title_id").classList.remove("related");
+            document.getElementById("related_arrow_one").classList.remove("show");
+            document.getElementById("reserves_tables").classList.remove("show");
+            document.getElementById("reserves_click").classList.remove("clicked");
+            document.getElementById("reserves_secondary").classList.remove("sec_clicked");
+            document.getElementById("reserves_arrow").classList.remove("arrow_clicked");
+            document.getElementById("loan_id").classList.remove("related");
+            document.getElementById("related_arrow_two").classList.remove("show");
+            document.getElementById("investor_link_tables").classList.remove("show");
+            document.getElementById("investor_link_click").classList.remove("clicked");
+            document.getElementById("investor_linkage_secondary").classList.remove("sec_clicked");
+            document.getElementById("investor_linkage_secondary_arrow").classList.remove("arrow_clicked");
+            document.getElementById("investor_linkage_tertiary").classList.remove("sec_clicked");
+            document.getElementById("investor_linkage_tertiary_arrow").classList.remove("arrow_clicked");
+            document.getElementById("loan_id").classList.remove("related");
+            document.getElementById("related_arrow_two").classList.remove("show");
+            document.getElementById("property_import_tables").classList.remove("show");
+            document.getElementById("property_import_click").classList.remove("clicked");
+            document.getElementById("property_secondary").classList.remove("sec_clicked");
+            document.getElementById("property_secondary_arrow").classList.remove("arrow_clicked");
+            document.getElementById("property_tertiary").classList.remove("sec_clicked");
+            document.getElementById("loan_id").classList.remove("related");
+            document.getElementById("related_arrow_two").classList.remove("show");
+            document.getElementById("applicant_link_tables").classList.remove("show");
+            document.getElementById("applicant_link_click").classList.remove("clicked");
+            document.getElementById("applicant_secondary").classList.remove("sec_clicked");
+            document.getElementById("applicant_secondary_arrow").classList.remove("arrow_clicked");
+            document.getElementById("loan_id").classList.remove("related");
+            document.getElementById("related_arrow_two").classList.remove("show");
+            document.getElementById("active_field_broker").classList.remove("show");
+            document.getElementById("active_field_lawyer").classList.remove("show");
+            document.getElementById("active_field_title").classList.remove("show");
+            document.getElementById("active_field_reserves").classList.remove("show");
+            document.getElementById("active_field_investor").classList.remove("show");
+            document.getElementById("active_field_property").classList.remove("show");
+            document.getElementById("active_field_applicant").classList.remove("show");
+            document.getElementById("close_button").classList.remove("show");
+            document.getElementById("field_divider").classList.remove("show");
+
+        }
+
+        function broker_select() {
+            clear_all_fields();
+            document.getElementById("broker_tables").classList.toggle("show");
+            document.getElementById("broker_click").classList.toggle("clicked");
+            document.getElementById("broker_secondary").classList.toggle("sec_clicked");
+            document.getElementById("broker_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("broker_id").classList.toggle("related");
+            document.getElementById("related_arrow_one").classList.toggle("show");
+            document.getElementById("active_field_broker").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+        }
+
+        function lawyer_select() {
+            clear_all_fields();
+            document.getElementById("lawyer_tables").classList.toggle("show");
+            document.getElementById("lawyer_click").classList.toggle("clicked");
+            document.getElementById("lawyer_secondary").classList.toggle("sec_clicked");
+            document.getElementById("lawyer_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("lawyer_id").classList.toggle("related");
+            document.getElementById("related_arrow_one").classList.toggle("show");
+            document.getElementById("active_field_lawyer").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+
+        }
+
+        function title_select() {
+            clear_all_fields();
+            document.getElementById("title_tables").classList.toggle("show");
+            document.getElementById("title_click").classList.toggle("clicked");
+            document.getElementById("title_secondary").classList.toggle("sec_clicked");
+            document.getElementById("title_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("title_id").classList.toggle("related");
+            document.getElementById("related_arrow_one").classList.toggle("show");
+            document.getElementById("active_field_title").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+        }
+
+        function reserves_select() {
+            clear_all_fields();
+            document.getElementById("reserves_tables").classList.toggle("show");
+            document.getElementById("reserves_click").classList.toggle("clicked");
+            document.getElementById("reserves_secondary").classList.toggle("sec_clicked");
+            document.getElementById("reserves_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("loan_id").classList.toggle("related");
+            document.getElementById("related_arrow_two").classList.toggle("show");
+            document.getElementById("active_field_reserves").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+        }
+
+        function investor_link_select() {
+            clear_all_fields();
+            document.getElementById("investor_link_tables").classList.toggle("show");
+            document.getElementById("investor_link_click").classList.toggle("clicked");
+            document.getElementById("investor_linkage_secondary").classList.toggle("sec_clicked");
+            document.getElementById("investor_linkage_secondary_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("investor_linkage_tertiary").classList.toggle("sec_clicked");
+            document.getElementById("investor_linkage_tertiary_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("loan_id").classList.toggle("related");
+            document.getElementById("related_arrow_two").classList.toggle("show");
+            document.getElementById("active_field_investor").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+        }
+
+        function property_import_select() {
+            clear_all_fields();
+            document.getElementById("property_import_tables").classList.toggle("show");
+            document.getElementById("property_import_click").classList.toggle("clicked");
+            document.getElementById("property_secondary").classList.toggle("sec_clicked");
+            document.getElementById("property_secondary_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("property_tertiary").classList.toggle("sec_clicked");
+            document.getElementById("loan_id").classList.toggle("related");
+            document.getElementById("related_arrow_two").classList.toggle("show");
+            document.getElementById("active_field_property").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+        }
+
+        function applicant_link_select() {
+            clear_all_fields();
+            document.getElementById("applicant_link_tables").classList.toggle("show");
+            document.getElementById("applicant_link_click").classList.toggle("clicked");
+            document.getElementById("applicant_secondary").classList.toggle("sec_clicked");
+            document.getElementById("applicant_secondary_arrow").classList.toggle("arrow_clicked");
+            document.getElementById("loan_id").classList.toggle("related");
+            document.getElementById("related_arrow_two").classList.toggle("show");
+            document.getElementById("active_field_applicant").classList.toggle("show");
+            document.getElementById("close_button").classList.toggle("show");
+            document.getElementById("field_divider").classList.toggle("show");
+        }
+
+
+
+
+    </script>
+
+<!-- Background Styling -->
+    <style>
+        body{
+            position: relative;
+            background-color: #f2f5fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .divide{
+            position: absolute;
+            width: 100%;
+            left: 0%;
+            height: 3%;
+            top: 0%;
+            background-color:#154361;
+        }
+
+
+        .pop_up_cover{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            background-color: #000000c9;
+            transition: ease-out 1s;
+        }
+
+        .pop_up{
+            position: absolute;
+            top: 35%;
+            height: 15%;
+            left: 40%;
+            width: 20%;
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 13px;
+            padding: 5px;
+            border-radius: 3px;
+            border-top: solid 20px #e0e1e2;
+            border-bottom: solid 20px #e0e1e2;
+            border-left: solid 10px #e0e1e2;
+            border-right: solid 10px #e0e1e2;
+            background: #f2f5fb;
+            z-index: 2000;
+            text-align: left;
+            line-height: 110%;
+            transition: ease-out 3s;
+        }
+
+        .ico_one{
+            border: none;
+            background: transparent url(https://app.mortgageautomator.com/app/imgs/toolbar_dark.gif?acv=235) no-repeat -655px 0;
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            overflow: clip;
+            box-sizing: inherit;
+        }
+
+        .ico_two{
+            border: none;
+            background: transparent url(https://app.mortgageautomator.com/app/imgs/toolbar_dark.gif?acv=235) no-repeat -672px -16px;
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            overflow: clip;
+            box-sizing: inherit;
+        }
+
+        .hide{display: none;}
+
+        .close_all{
+            display: none;
+            position: absolute;
+            top: 1.5%;
+            left: 32%;
+            text-align: center;
+            background-color:#e55151;
+            color: #ffffff;
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 13px;
+            padding: 10px;
+            border-radius: 3px;
+            border: 3px solid transparent;
+            z-index: 20;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .close_all:hover {
+            background: #ffffff;
+            color: #e55151;
+            border: 3px solid #e55151;
+        }
+
+        .active_field{
+            display: none;
+            position: absolute;
+            top: 1.5%;
+            left: 38%;
+            text-align: center;
+            background-color:#344e60;
+            color: #f2f5fbd9;
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 16px 30px;
+            border-radius: 3px;
+            border: 3px solid transparent;
+            z-index: 20;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        .field_divider{
+            display: none;
+            position: absolute;
+            width: 3px;
+            height: 60%;
+            top: 20%;
+            left: 54%;
+            background-color: #154361;
+        }
+
+        .ico_three{
+            border: none;
+            background: transparent url(https://app.mortgageautomator.com/app/imgs/toolbar_dark.gif?acv=235) no-repeat -576px -16px;
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+            overflow: clip;
+            box-sizing: inherit;
+        }
+
+        button.menu_button{
+            position: absolute;
+            top: 1.8%;
+            left: 28%;
+            text-align: center;
+            background-color:#f2f5fb;
+            border: solid 2px #f2f5fb;
+            border-radius: 3px;
+            line-height: 80%;
+            padding: 11px 14px;
+            z-index: 250;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        button.menu_button:hover{
+            color:#14b8a6;
+        }
+
+
+    </style>
+
+<!-- Main Fields -->
+    <style>
+        .loan_import{
+            position: absolute;
+            right: 12%;
+            top: 36%;
+            width: 400px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 30;
+            font-family: 'Roboto Flex', sans-serif;
+            font-weight: 600;
+            color: #f2f5fb;
+            padding: 35px 0px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            border: 3px solid #154361;
+            background-color: #154361;
+        }
+
+        .broker_button{
+            position: absolute;
+            top: 17%;
+            right: 32%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 20px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .broker_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 16%;
+            z-index: 100;
+        }
+
+        .lawyer_button{
+            position: absolute;
+            top: 14%;
+            right: 18%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 20px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .lawyer_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 13%;
+            z-index: 100;
+        }
+
+        .title_button{
+            position: absolute;
+            top: 17%;
+            right: 4%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 20px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .title_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 16%;
+            z-index: 100;
+        }
+
+        .reserves_button{
+            position: absolute;
+            top: 54%;
+            right: 32%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 20px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .reserves_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 53%;
+            z-index: 100;
+        }
+
+        .investor_link_button{
+            position: absolute;
+            top: 66%;
+            right: 23%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 10px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .investor_link_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 65%;
+            z-index: 100;
+        }
+
+        .property_import_button{
+            position: absolute;
+            top: 66%;
+            right: 11%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 10px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .property_import_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 65%;
+            z-index: 100;
+        }
+
+        .applicant_link_button{
+            position: absolute;
+            top: 53%;
+            right: 3%;
+            width: 200px;
+            color: #ffffff;
+            border-radius: 3px; 
+            font-size: 25px;
+            text-align: center;
+            font-family: 'Robot Flex', sans-serif;
+            font-weight: 700;
+            padding: 10px;
+            background-color: #43b8a6;
+            border: 5px solid #43b8a6;
+            box-shadow: 2px 0px 2px 0px #436e5a80;
+            transition: ease-in-out 0.25s;
+            z-index: 100;
+        }
+
+        .applicant_link_button:hover{
+            background-color: #ffffff;
+            border: 5px solid #43b8a6;
+            color: #43b8a6;
+            box-shadow: 10px 0px 10px 2px #436e5a80;
+            top: 52%;
+            z-index: 100;
+        }
+        
+        .clicked{
+            background-color: #ffffff;
+            border: 3px solid #e55151;
+            color: #e55151;
+        }
+
+    </style>
+
+ <!-- Base Table -->   
+    <style>
+        table.base{
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0px 0;
+            font-size: 14px;
+            font-family: 'Roboto Flex', sans-serif;
+            border: solid 10px #ffffff;
+            border-radius: 3px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        table.base thead tr,
+        table.base thead td{
+            background-color: #43b8a6;
+            color: #f2f5fb;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        table.base td,
+        table.base tr{
+            padding: 2px 20px;
+        }
+
+        table.base tbody tr{
+            border-bottom: 1px solid transparent;
+        }
+
+        table.base tbody tr:nth-of-type(even) {
+            background-color: #f2f5fb;
+        }
+
+        table.base tbody tr:nth-of-type(odd) {
+            background-color: #ffffff;
+        }
+
+        td.related{
+            color: #ffffff;
+            background-color: #e55151;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0px 20px;
+        }
+
+        td.related_two{
+            color: #ffffff;
+            background-color: #f5b577;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0px 20px;
+        }
+
+        td.related_three{
+            color: #ffffff;
+            background-color:#344e60;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 0px 20px;
+        }
+
+    </style>
+
+<!-- Arrows -->      
+    <style>  
+        .top_arrows{
+            position: absolute;
+            top: 25.5%;
+            left: 61%;
+            color: #95bccf;
+            font-size: 100px;
+        }
+
+        .top_arrows_two{
+            position: absolute;
+            top: 20.5%;
+            left: 75%;
+            color: #95bccf;
+            font-size: 110px;
+        }
+
+        .bottom_arrows{
+            position: absolute;
+            top: 48%;
+            left: 68.7%;
+            color: #95bccf;
+            font-size: 100px;
+        }
+
+        .bottom_arrows_two{
+            position: absolute;
+            top: 49%;
+            left: 71%;
+            color: #95bccf;
+            font-size: 130px;
+        }
+
+        .related_arrow_one{
+            display: none;
+            position: absolute;
+            font-size: 100px;
+            color: #e55151;
+            top: 18%;
+            left: 25%;
+            z-index: 150;
+        }
+        
+    </style>
+
+<!-- Table Holders-->
+    <style>
+
+        .loan_import_table{
+            position: absolute;
+            left: 3%;
+            top: 6%;
+            width: 20%;
+            background: #ffffff;
+            border-radius: 3px;
+        }
+
+        .broker_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 14%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .lawyer_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 17%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .title_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 17%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .reserves_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 17%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .investor_link_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 14%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .applicant_link_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 17%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .property_import_tables{
+            display: none;
+            position: absolute;
+            left: 32%;
+            width: 20%;
+            top: 16%;
+            text-align: center;
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 20;
+        }
+
+        .show {display:block;}
+
+    </style>
+
+<!-- Secondary Fields -->
+    <style>
+        .broker_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 7%;
+            right: 33%;
+            padding: 15px 30px;
+            border-radius: 3px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .broker_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 12%;
+            right: 37%;
+            font-size: 40px;
+        }
+
+        .lawyer_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 4%;
+            right: 19%;
+            padding: 15px 30px;
+            border-radius: 3px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }        
+
+        .lawyer_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 9%;
+            right: 23%;
+            font-size: 40px;
+        }
+
+        .title_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 7%;
+            right: 4.5%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .title_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 12%;
+            right: 9%;
+            font-size: 40px;
+        }
+
+        .reserves_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 66%;
+            right: 35%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .reserves_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 62%;
+            right: 39%;
+            font-size: 40px;
+        }
+
+        .investor_linkage_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 80%;
+            right: 25%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .investor_linkage_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 76%;
+            right: 28%;
+            font-size: 40px;
+        }
+
+        .investor_linkage_tertiary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 90%;
+            right: 25%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .investor_linkage_tertiary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 86%;
+            right: 28%;
+            font-size: 40px;
+        }
+
+        .property_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 81%;
+            right: 13%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .property_tertiary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 88.7%;
+            right: 12.75%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+            text-align: center;
+        }
+
+        .property_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 76%;
+            right: 16%;
+            font-size: 40px;
+        }
+
+        .applicant_secondary{
+            position: absolute;
+            font-family: 'Roboto Flex', sans-serif;
+            color: #e5e7eb;
+            font-weight: 700;
+            font-size: 22px;
+            border: solid 2px #e5e7eb;
+            top: 66%;
+            right: 3%;
+            padding: 15px 15px;
+            border-radius: 3px;
+            z-index: 50;
+            background: #f2f5fb;
+        }
+
+        .applicant_secondary_arrow{
+            position: absolute;
+            color: #e5e7eb;
+            top: 62%;
+            right: 6%;
+            font-size: 40px;
+        }
+
+        .sec_clicked{
+            color: #3a3b3c;
+            border: solid 2px #3a3b3c;
+        }
+
+        .arrow_clicked{
+            color: #3a3b3c;
+        }
+
+
+    </style>
+
+    </head>
+
+    <body>
+    <div id="popupmessage">
+        <button onclick="hide_popups()" class="pop_up_cover" id="pop_up_cover"></button>
+        <div class="pop_up" id="pop_up"> <span style="color: #14b8a6; font-weight: 500; font-size: 18px;" > | Loan Import Entity Diagram </span><br><br><br> &emsp; &emsp; Select a <span style="color: #14b8a6; font-weight: 700; font-size: 14px;">Field</span> to view connection to loan import <br><br> &emsp; &emsp; <span style="color:#e55151; font-weight: 600;"> Click Anywhere to Begin</span>
+        <br><br>
+        <div style="width: 48%; position:absolute; left: 2%; bottom: 5%">
+            <div>
+            <img class="ico_one" style="margin-right: 2px;" src="https://app.mortgageautomator.com/app/imgs/t.gif"><span style="color: #ccc">&nbsp; Ian Lee</span>
+            </div>
+        </div>
+        <div style="width: 48%; text-align: right;position:absolute; right: 2%; bottom: 5%">
+            <div>
+            <img class="ico_two" style="margin-right: 2px;" src="https://app.mortgageautomator.com/app/imgs/t.gif"><span style="color: #ccc">&nbsp; October, 2023</span>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="banner">
+        <div class="close_all" id="close_button"><button onclick="clear_all_fields()" style="border: none; background: transparent; color: inherit; padding: px;"> Close All <br> x</button></div>
+        <div class="active_field" id="active_field_broker"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Broker</div>
+        <div class="active_field" id="active_field_lawyer"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Lawyer</div>
+        <div class="active_field" id="active_field_title"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Title</div>
+        <div class="active_field" id="active_field_reserves"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Reserves</div>
+        <div class="active_field" id="active_field_investor"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Investor Linkages</div>
+        <div class="active_field" id="active_field_property"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Property Import</div>
+        <div class="active_field" id="active_field_applicant"><img class="ico_three" style="margin-right: 8px;" src="https://app.mortgageautomator.com/app/imgs/t.gif">Applicant Linkages</div>
+
+        <div class="field_divider" id="field_divider"></div>
+        <button class="menu_button" onclick="open_menu()"> &#9632;&#9632;&#9632; <br> &#9632;&#9632;&#9632; <br> &#9632;&#9632;&#9632; </button>
+    </div>
+
+    <div id="main_buttons">
+        <div class="divide"></div>
+        <button onclick="broker_select()" class="broker_button" id="broker_click">Broker</button>
+        <button onclick="lawyer_select()" class="lawyer_button" id="lawyer_click">Lawyer</button>
+        <button onclick="title_select()" class="title_button" id="title_click">Title</button>
+
+        <div class="top_arrows">&#8627;&nbsp; &emsp; &emsp; &emsp; &nbsp; &#8626;</div>
+        <div class="top_arrows_two">&#8595;</div>
+
+        <div class="loan_import">Loan Import</div>
+
+        <div class="bottom_arrows">&#8626;  &emsp; &nbsp; &#8627;</div>
+        <div class="bottom_arrows_two"> &#8595; &nbsp; &#8595; </div>
+
+        <button onclick="reserves_select()" class="reserves_button" id="reserves_click">Reserves</button>
+        <button onclick="investor_link_select()" class="investor_link_button" id="investor_link_click">Investor Linkages</button>
+        <button onclick="property_import_select()" class="property_import_button" id="property_import_click">Property Import</button>
+        <button onclick="applicant_link_select()" class="applicant_link_button" id="applicant_link_click">Aplicant Linkages</button>
+    </div>
+
+    <div id="secondary_buttons">
+        <div class="broker_secondary" id="broker_secondary">Brokerage</div>
+        <div class="broker_secondary_arrow" id="broker_arrow">&#8595;</div>
+        <div class="related_arrow_one" id="related_arrow_one">&#8592;</div>
+        
+        <div class="lawyer_secondary" id="lawyer_secondary">Law Firm</div>
+        <div class="lawyer_secondary_arrow" id="lawyer_arrow">&#8595;</div>
+        
+        <div class="title_secondary" id="title_secondary">Title Company</div>
+        <div class="title_secondary_arrow" id="title_arrow">&#8595;</div>
+        
+        <div class="reserves_secondary" id="reserves_secondary">Transactions</div>
+        <div class="reserves_secondary_arrow" id="reserves_arrow">&#8593;</div>
+        <div class="related_arrow_one" id="related_arrow_two">&#8594;</div>
+        
+        <div class="investor_linkage_secondary" id="investor_linkage_secondary">Accounts</div>
+        <div class="investor_linkage_secondary_arrow" id="investor_linkage_secondary_arrow">&#8593;</div>
+        <div class="investor_linkage_tertiary" id="investor_linkage_tertiary">Investors</div>
+        <div class="investor_linkage_tertiary_arrow" id="investor_linkage_tertiary_arrow">&#8593;</div>
+        
+        <div class="property_secondary" id="property_secondary">Insurance</div>
+        <div class="property_tertiary" id="property_tertiary">Existing <br>Mortgages</div>
+        <div class="property_secondary_arrow" id="property_secondary_arrow">&#8595;</div>
+        
+        <div class="applicant_secondary" id="applicant_secondary">Borrowers</div>
+        <div class="applicant_secondary_arrow" id="applicant_secondary_arrow">&#8593;</div>
+    </div>
+
+
+    <div id="tables">
+
+        <div class="loan_import_table">
+            <table class="base">
+                <thead><tr><th style="background: #154361;">Loan Import</th></tr></thead>
+                <tbody>
+                    <tr><td id="loan_id"><strong>Loan ID</strong></td></tr>
+                    <tr><td>Friendly File Name</td></tr>
+                    <tr><td>Loan Purpose</td></tr>
+                    <tr><td>Main Loan Type</td></tr>
+                    <tr><td>Loan Type</td></tr>
+                    <tr><td>Application Date</td></tr>
+                    <tr><td>Loan Position</td></tr>
+                    <tr><td>Original/Purchase Price</td></tr>
+                    <tr><td>Current Value, Down Payment</td></tr>
+                    <tr><td>Closing Costs</td></tr>
+                    <tr><td>Initial Advance</td></tr>
+                    <tr><td>Total Facility</td></tr>
+                    <tr><td>Lien Holdback and Standby Rate</td></tr>
+                    <tr><td>Rehab Amount</td></tr>
+                    <tr><td>After Repair Value</td></tr>
+                    <tr><td>Investor Funding Method</td></tr>
+                    <tr><td>Interest Rate and Interest Rate Type</td></tr>
+                    <tr><td>Index/Minimum Rate</td></tr>
+                    <tr><td>Monthly Payment Method</td></tr>
+                    <tr><td>Repayment Type</td></tr>
+                    <tr><td>Amortization Period</td></tr>
+                    <tr><td>Interest Schedule</td></tr>
+                    <tr><td>Holdback PPI/Interest Reservce Amount</td></tr>
+                    <tr><td>Loan Term</td></tr>
+                    <tr><td>Payment Frequency</td></tr>
+                    <tr><td>Early Termination Type and Penalties</td></tr>
+                    <tr><td>Lender/Broker Fees</td></tr>
+                    <tr><td>Deposit, Doc, Closing and Funding Date</td></tr>
+                    <tr><td>Maturity</td></tr>
+                    <tr><td>Default Rate</td></tr>
+                    <tr><td>Borrower Pay Days/Timing</td></tr>
+                    <tr><td>Investor Pay Days/Timing</td></tr>
+                    <tr><td>Payment Method</td></tr>
+                    <tr><td>PAD Info</td></tr>
+                    <tr><td>Loan Notes/Substatus</td></tr>
+                    <tr><td>Fund Loan</td></tr>
+                    <tr><td id="lawyer_id">Law Staff ID</td></tr>
+                    <tr><td id="broker_id">Broker ID</td></tr>
+                    <tr><td id="title_id">Title Staff ID</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="broker_tables" id="broker_tables">
+
+            <table class="base">
+                <thead><tr><th>Broker</th></tr></thead>
+                <tbody>
+                    <tr><td class="related"><strong>Broker ID</strong></td></tr>
+                    <tr><td class="realted_two">Brokerage ID</td></tr>
+                    <tr><td>First Name</td></tr>
+                    <tr><td>Last Name</td></tr>
+                    <tr><td>E-Mail</td></tr>
+                    <tr><td>Phone</td></tr>
+                    <tr><td>License #</td></tr>
+                    <tr><td>License Type</td></tr>
+                    <tr><td>License Expiry</td></tr>
+                    <tr><td>PAD Account Name</td></tr>
+                    <tr><td>PAD Institution</td></tr>
+                    <tr><td>PAD Branch/Transit</td></tr>
+                    <tr><td>PAD Acount Number</td></tr>
+                </tbody>
+            </table>
+
+
+            
+            <span style="font-size: 60px; color:#f5b577;">&#8593;</span>
+            <br><br>
+
+
+            <table class="base">
+                <thead>
+                    <tr><th>Brokerage</th></tr>
+                </thead>
+                    <tr><td class="related_two"><strong>Brokerage ID</strong></td></tr>
+                    <tr><td>Brokerage</td></tr>
+                    <tr><td>Address</td></tr>
+                    <tr><td>City</td></tr>
+                    <tr><td>Province/State</td></tr>
+                    <tr><td>Postal/Zip</td></tr>
+                    <tr><td>Phone</td></tr>
+                    <tr><td>Fax</td></tr>
+                    <tr><td>Brokerage Licence</td></tr>
+                    <tr><td>Name of Cheque</td></tr>
+                    <tr><td>Enable PAD/ACH</td></tr>
+                    <tr><td>Account Name</td></tr>
+                    <tr><td>Institution</td></tr>
+                    <tr><td>Branch/Transit</td></tr>
+                    <tr><td>Account Number</td></tr>
+            </table>
+        </div>
+
+        <div class="lawyer_tables" id="lawyer_tables">
+            <table class="base">
+                <thead><tr><th>Lawyer</th></tr></thead>
+                <tbody>
+                    <tr><td class="related"><strong>Law Staff ID</strong></td></tr>
+                    <tr><td class="related_two">Law Firm ID</td></tr>
+                    <tr><td>Type</td></tr>
+                    <tr><td>First Name</td></tr>
+                    <tr><td>Last Name</td></tr>
+                    <tr><td>Email</td></tr>
+                </tbody>
+            </table>
+
+
+            <br><br>
+            <span style="font-size: 100px; color: #f5b577">&#8593;</span>
+            <br><br><br><br>
+
+
+            <table class="base">
+                <thead>
+                    <tr><th>Law Firm</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Law Firm ID</strong></td></tr>
+                    <tr><td>Law Firm</td></tr>
+                    <tr><td>Address</td></tr>
+                    <tr><td>City</td></tr>
+                    <tr><td>Province/State</td></tr>
+                    <tr><td>Postal/Zip</td></tr>
+                    <tr><td>Phone</td></tr>
+                    <tr><td>Fax</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="title_tables" id="title_tables">
+            <table class="base">
+                <thead><tr><th>Title Staff</th></tr></thead>
+                <tbody>
+                    <tr><td class="related"><strong>Title Staff ID</strong></td></tr>
+                    <tr><td class="related_two">Title Company ID</td></tr>
+                    <tr><td>First Name</td></tr>
+                    <tr><td>Last Name</td></tr>
+                    <tr><td>Email</td></tr>
+                    <tr><td>Phone</td></tr>
+                </tbody>
+            </table>
+
+
+            <br><br>
+            <span style="font-size: 100px; color: #f5b577;">&#8593;</span>
+            <br><br><br><br>
+
+
+            <table class="base">
+                <thead>
+                    <tr><th>Title Company</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Title Company ID</strong></td></tr>
+                    <tr><td>Title Company</td></tr>
+                    <tr><td>Address</td></tr>
+                    <tr><td>City</td></tr>
+                    <tr><td>Province/State</td></tr>
+                    <tr><td>Postal/Zip</td></tr>
+                    <tr><td>Phone</td></tr>
+                    <tr><td>Fax</td></tr>
+                    <tr><td>Bank Name</td></tr>
+                    <tr><td>Bank Address</td></tr>
+                    <tr><td>ABA</td></tr>
+                    <tr><td>Account Name</td></tr>
+                    <tr><td>Account #</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="reserves_tables" id="reserves_tables">
+            <table class="base">
+                <thead><tr><th>Reserves</th></tr></thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Reserve ID</strong></td></tr>
+                    <tr><td class="related" >Loan ID</td></tr>
+                    <tr><td>Reserve Name</td></tr>
+                    <tr><td>Other Name</td></tr>
+                    <tr><td>Reserve Description</td></tr>
+                    <tr><td>Amount From Funding</td></tr>   
+                </tbody>
+            </table>
+
+
+            <br><br>
+            <span style="font-size: 100px; color:#f5b577;">&#8593;</span>
+            <br><br><br><br>
+
+
+            <table class="base">
+                <thead>
+                    <tr><th>Reserve Transactions</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Reserve ID</strong></td></tr>
+                    <tr><td>Date</td></tr>
+                    <tr><td>Amount</td></tr>
+                    <tr><td>Transaction Notes</td></tr>
+                    <tr><td>Type</td></tr>
+                    <tr><td>Method</td></tr>
+                    <tr><td>Status</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="investor_link_tables" id="investor_link_tables">
+            <table class="base">
+                <thead>
+                    <tr><th>Investor to Loan Linkages</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Investor Linkage ID</strong></td></tr>
+                    <tr><td class="related">Loan ID</td></tr>
+                    <tr><td class="related_two">Investor Account ID</td></tr>
+                    <tr><td>Amount</td></tr>
+                    <tr><td>Piece</td></tr>
+                    <tr><td>Rate Type</td></tr>
+                    <tr><td>Interest Rate</td></tr>
+                    <tr><td>Minimum Rate</td></tr>
+                    <tr><td>Standby Amount</td></tr>
+                    <tr><td>On Title?</td></tr>
+                    <tr><td>Sub Investor? &emsp; | &emsp; Sub Investor Info</td></tr>
+                </tbody>
+            </table>
+
+           
+            <span style="font-size: 40px; color:#f5b577;">&#8593;</span>
+            <br><br>
+
+            <table class="base">
+                <thead>
+                    <tr><th>Accounts</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Acount ID</strong></td></tr>
+                    <tr><td class="related_three">Investor ID</td></tr>
+                    <tr><td>Legal Name</td></tr>
+                    <tr><td>Account Details </td></tr>
+                    <tr><td>Enable Options</td></tr>
+                    <tr><td>Total Available Funds</td></tr>
+                    <tr><td>Add Servicer</td></tr>
+            </table>
+            <br>
+
+            <table class="base">
+                <thead>
+                    <tr><th>Investor Profiles</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Investor Type</td></tr>
+                    <tr><td class="related_three"><strong>Investor ID</strong></td></tr>
+                    <tr><td>Fund Name &emsp; | &emsp; Fund Start Date</td></tr>
+                    <tr><td>Corporation Name</td></tr>
+                    <tr><td>Individual Investor Details</td></tr>
+                    <tr><td>Notes</td></tr>
+                    <tr><td>EMD</td></tr>
+                </tbody>
+            </table>
+            
+
+        </div>
+
+        <div class="applicant_link_tables" id="applicant_link_tables">
+            <table class="base">
+                <thead><tr><th>Applicant to Loan Linkages</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>Loan Linkage ID</strong></td></tr>
+                    <tr><td class="related">Loan ID</td></tr>
+                    <tr><td class="related_two">Borrower/Guarantor ID</td></tr>
+                    <tr><td>Linkage Type</td></tr>
+                    <tr><td>(Borrower Type Only) Primary?</td></tr>
+                    <tr><td>Use for Loan Payment</td></tr> 
+                </tbody>
+            </table>
+
+            <br><br>
+            <span style="font-size: 80px; color:#f5b577">&#8593;</span>
+            <br><br><br>
+
+
+            <table class="base">
+                <thead>
+                    <tr><th>Borrower/Guarantor</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Borrower ID</strong></td></tr>
+                    <tr><td>First Name</td></tr>
+                    <tr><td>Last Name</td></tr>
+                    <tr><td>DOB</td></tr>
+                    <tr><td>SIN</td></tr>
+                    <tr><td>Credit Score</td></tr>
+                    <tr><td>Residential Status</td></tr>
+                    <tr><td>Contact Info</td></tr>
+                    <tr><td>Address</td></tr>
+                    <tr><td>Company</td></tr>
+                    <tr><td>Corporation Type</td></tr>
+                    <tr><td>Business Number</td></tr>
+                    <tr><td>Banking Information</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="property_import_tables" id="property_import_tables">
+            <table class="base">
+                <thead>
+                    <tr><th>Property Import</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td class="related_two"><strong>Property ID</strong></td></tr>
+                    <tr><td class="related">Loan ID</td></tr>
+                    <tr><td>Type</td></tr>
+                    <tr><td>Address</td></tr>
+                    <tr><td>Estimated Value</td></tr>
+                    <tr><td>Appraisal Information</td></tr>
+                    <tr><td>Site Inspection Fee</td></tr>
+                    <tr><td>Projected Value/ARV</td></tr>
+                    <tr><td>Lot Information</td></tr>
+                    <tr><td>Property Information</td></tr>
+                    <tr><td>Mothly Fees</td></tr>
+                    <tr><td>Property Tax</td></tr>
+                </tbody>
+            </table>
+            
+            <span style="font-size: 60px; color:#f5b577;">&#8595;</span>
+            <br><br>
+
+            <table class="base">
+                <thead>
+                    <tr><th>Insurance</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Insurance ID</strong></td></tr>
+                    <tr><td class="related_two">Property ID</td></tr>
+                    <tr><td>Name &emsp; | &emsp; Company</td></tr>
+                    <tr><td>Policy Information</td></tr>
+                    <tr><td>Insurance Agent Details</td></tr>
+                </tbody>
+            </table>
+
+            <br>
+        
+
+            <table class="base">
+                <thead>
+                    <tr><th>Existing Mortgages</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Mortgage ID</strong></td></tr>
+                    <tr><td class="related_two">Property ID</td></tr>
+                    <tr><td>Mortgage Holder</td></tr>
+                    <tr><td>Type</td></tr>
+                    <tr><td>Details of Exisitng Mortgage</td></tr>
+                </tbody>
+            </table>
+
+        </div>
+    
+    </div>
+
+    </body>
+
+</html>
