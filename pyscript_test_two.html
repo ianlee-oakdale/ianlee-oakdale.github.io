@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <!-- <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" /> -->
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+
+  
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500;8..144,600&display=swap');
+    </style>
+
+  <style>
+
+    .main{
+        position: absolute;
+        width: 40%;
+        top: 5%;
+        left: 30%;
+        font-family: 'Robot Flex', sans-serif;
+    }
+
+    table.base{
+      position: absolute;
+      top: 25%;
+      width: 90%;
+      left:5%;
+      border: solid 1px black;
+      border-collapse: collapse;
+    }
+
+
+    .base td,
+    .base tr{
+      padding: 0px;
+      border: solid 1px black;
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="main">
+  <div style="width: 100%; position:relative; left: 50px">Paste Data from Excel Column You need to Transform Here</div>
+  <button id="btn" type="submit" style="width: 20%; position:relative; top: 50px; left: 250px"pys-onClick="my_function">Submit</button>
+  <textarea id="area" cols="40" rows="20"></textarea>
+</div>
+
+<table class="base" id="test-output"></table>
+
+<py-env>
+  - numpy
+  - pandas
+</py-env>
+
+<py-script>
+
+import numpy as np
+import pandas as pd
+
+def my_function(*args, **kwargs):
+
+
+    text = Element('area').element.value
+    fd=text.split('\n')
+
+    
+    an=str('Annual-Even Distribution : $')
+    mo=str('Month-Specific Per Diem : $')
+
+
+    holder=[]
+    fd_fixed=[]
+    for i in (np.arange(len(fd))):
+      if i in holder:
+        holder.append('x')
+      else:
+        if len(fd[i])==0:
+          fd_fixed.append(fd[i])
+        else:
+              if fd[i][0] == '"':
+                  if '"' not in fd[i+1]:
+                      if '"' not in fd[i+2]:
+                          if '"' not in fd[i+3]:
+                              if '"' not in fd[i+4]:
+                                  if '"' not in fd[i+5]:
+                                      if '"' not in fd[i+6]:
+                                        if '"' not in fd[i+7]:
+                                          holder.append(str('x'))
+                                        else:
+                                            holder.append(i)
+                                            holder.append(i+1)
+                                            holder.append(i+2)
+                                            holder.append(i+3)
+                                            holder.append(i+4)
+                                            holder.append(i+5)
+                                            holder.append(i+6)
+                                            holder.append(i+7)
+                                            fd_fixed.append(str(fd[i])+str(fd[i+1])+str(fd[i+2])+str(fd[i+3])+str(fd[i+4])+str(fd[i+5])+str(fd[i+6])+str(fd[i+7]))
+                                        
+                                      else:  
+                                          holder.append(i)
+                                          holder.append(i+1)
+                                          holder.append(i+2)
+                                          holder.append(i+3)
+                                          holder.append(i+4)
+                                          holder.append(i+5)
+                                          holder.append(i+6)
+                                          fd_fixed.append(str(fd[i])+str(fd[i+1])+str(fd[i+2])+str(fd[i+3])+str(fd[i+4])+str(fd[i+5])+str(fd[i+6]))
+                                  else:
+                                      holder.append(i)
+                                      holder.append(i+1)
+                                      holder.append(i+2)
+                                      holder.append(i+3)
+                                      holder.append(i+4)
+                                      holder.append(i+5)
+                                      fd_fixed.append(str(fd[i])+str(fd[i+1])+str(fd[i+2])+str(fd[i+3])+str(fd[i]+4)+str(fd[i+5]))
+                              else:
+                                  holder.append(i)
+                                  holder.append(i+1)
+                                  holder.append(i+2)
+                                  holder.append(i+3)
+                                  holder.append(i+4)
+                                  fd_fixed.append(str(fd[i])+str(fd[i+1])+str(fd[i+2])+str(fd[i+3])+str(fd[i+4]))
+                          else:
+                              holder.append(i)
+                              holder.append(i+1)
+                              holder.append(i+2)
+                              holder.append(i+3)
+                              fd_fixed.append(str(fd[i])+str(fd[i+1])+str(fd[i+2])+str(fd[i+3]))
+                      else:
+                          holder.append(i)
+                          holder.append(i+1)
+                          holder.append(i+2)
+                          fd_fixed.append(str(fd[i])+str(fd[i+1])+str(fd[i+2]))
+                  else:
+                      holder.append(str('x'))
+              else:
+                  fd_fixed.append(str(fd[i]))
+
+
+      
+    new_th=document.createElement('th')
+    new_th.innerText=str('Annual Even Distribution')
+    document.getElementById("test-output").append(new_th)
+
+    new_th=document.createElement('th')
+    new_th.innerText=str(' ')
+    document.getElementById("test-output").append(new_th)
+
+    new_th=document.createElement('th')
+    new_th.innerText=str(' ')
+    document.getElementById("test-output").append(new_th)
+    
+    new_th=document.createElement('th')
+    new_th.innerText=str('Monthly Even')
+    document.getElementById("test-output").append(new_th)   
+
+
+
+    for idx, n in enumerate(fd_fixed[2:]):    
+      new_row=document.createElement('tr')
+      new_row.setAttribute("id",str(idx))
+      document.getElementById("test-output").append(new_row)
+
+    for idx, n in enumerate(fd_fixed[2:]):
+        if n==n:
+            cdh=[]
+            if an in n:
+                s1=n.split(an)
+                aeh=[]
+                for i in s1[1:]:
+                    aeh.append(float(i.split(' *')[0]))
+                x1=('$'+str(round((sum(aeh)),2)))
+                x2=(str((str(s1[1].split('* ')[1].split('/12')[0]))))
+                x3=('$'+(str(round((float(s1[1].split('* ')[1].split('/12')[0])*sum(aeh)*1/12),2))))
+                xx1=document.createElement('td')
+                xx1.innerText=x1
+                document.getElementById(str(idx)).append(xx1)
+                xx2=document.createElement('td')
+                xx2.innerText=x2
+                document.getElementById(str(idx)).append(xx2)
+                xx3=document.createElement('td')
+                xx3.innerText=x3
+                document.getElementById(str(idx)).append(xx3)
+                cdh.append(float(s1[1].split('* ')[1].split('/12')[0])*sum(aeh)*1/12)
+            else:
+                x1=str('&nbsp;')
+                x2=str('&nbsp;')
+                x3=str('&nbsp;')
+                xx1=document.createElement('td')
+                xx1.innerText=x1
+                document.getElementById(str(idx)).append(xx1)
+                xx2=document.createElement('td')
+                xx2.innerText=x2
+                document.getElementById(str(idx)).append(xx2)
+                xx3=document.createElement('td')
+                xx3.innerText=x3
+                document.getElementById(str(idx)).append(xx3)
+            if mo in n:
+                s2=n.split(mo)
+                for idx2, i in enumerate(s2[1:]):
+                    y1=(i.split(' *')[0])
+                    y2=(i.split('(')[1].split(')')[0])
+                    y3=(i.split('(')[2].split(')')[0])
+                    y4=(str(1/30*1/12*float(i.split(' *')[0])*float(i.split('(')[1].split('/')[0])*float(i.split('(')[2].split('/')[0])))
+                    yy1=document.createElement('td')
+                    yy1.innerText=y1
+                    document.getElementById(str(idx)).append(yy1)
+                    yy2=document.createElement('td')
+                    yy2.innerText=y2
+                    document.getElementById(str(idx)).append(yy2)
+                    yy3=document.createElement('td')
+                    yy3.innerText=y3
+                    document.getElementById(str(idx)).append(yy3)
+                    cdh.append(1/30*1/12*float(i.split(' *')[0])*float(i.split('(')[1].split('/')[0])*float(i.split('(')[2].split('/')[0]))
+            else:
+                x1=str('&nbsp;')
+                x2=str('&nbsp;')
+                x3=str('&nbsp;')
+                xx1=document.createElement('td')
+                xx1.innerText=x1
+                document.getElementById(str(idx)).append(xx1)
+                xx2=document.createElement('td')
+                xx2.innerText=x2
+                document.getElementById(str(idx)).append(xx2)
+                xx3=document.createElement('td')
+                xx3.innerText=x3
+                document.getElementById(str(idx)).append(xx3)
+            
+
+
+  
+</py-script>
+
+  </body>
+
+</html>
